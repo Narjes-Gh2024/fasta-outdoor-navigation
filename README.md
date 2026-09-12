@@ -18,3 +18,7 @@ In this section, we are going to talk about different environments used for simu
 <p align="center">
   <img src="doc_images/mountain.png" alt="Mountain Lake Environment" width="800">
 </p>
+
+<p align="center">
+  <img src="doc_images/mountain_with_robot.png" alt="Mountain Lake Environment" width="800">
+</p>
