@@ -1,0 +1,14 @@
+/.vscode/*
+
+# ROS 2 / Colcon workspace
+outdoor_ws/build/
+outdoor_ws/install/
+outdoor_ws/log/
+outdoor_ws/.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# ROS 2 generated files
+*.db3
