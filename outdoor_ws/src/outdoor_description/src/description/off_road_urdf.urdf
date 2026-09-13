@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<robot name="outdoor_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-8.17927536369341E-17 -1.3950931901084E-15 0.130545650801935"
+        rpy="0 0 0" />
+      <mass
+        value="80.0" />
+      <inertia
+        ixx="0.265440261208668"
+        ixy="-2.10459838722132E-17"
+        ixz="-1.53164849370567E-18"
+        iyy="0.496368289840211"
+        iyz="-8.4667989116219E-18"
+        izz="0.727766670019649" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/chasis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/chasis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="RR_trail_link">
+    <inertial>
+      <origin
+        xyz="-0.170221256392297 -0.0275656142127739 0.0543490368210151"
+        rpy="0 0 0" />
+      <mass
+        value="10.0" />
+      <inertia
+        ixx="0.000715366844500184"
+        ixy="-0.00148719164269175"
+        ixz="1.50700530514993E-05"
+        iyy="0.00870189719204092"
+        iyz="2.78696868636341E-06"
+        izz="0.00910712567819077" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RR_trail_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RR_trail_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_trail_joint"
+    type="revolute">
+    <origin
+      xyz="-0.140000000000002 -0.3191 -0.0249999999999823"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_trail_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit lower="-0.5" upper="0.5" effort="1000" velocity="10"/> 
+    <dynamics damping="10.0" friction="0.0"/>
+  </joint>
+  <link
+    name="RR_wheel_link">
+    <inertial>
+      <origin
+        xyz="-1.2532997081427E-05 -1.10631541935108E-05 0.108800844281904"
+        rpy="0 0 0" />
+      <mass
+        value="23.0" />
+      <inertia
+        ixx="0.51169679883732"
+        ixy="-1.66959054129079E-05"
+        ixz="1.07251073346353E-05"
+        iyy="0.511700003530438"
+        iyz="9.68060231163269E-06"
+        izz="0.888108857610364" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RR_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RR_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.340392790463809 -0.0629622958633592 0.129955999999654"
+      rpy="0 0 0" />
+    <parent
+      link="RR_trail_link" />
+    <child
+      link="RR_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="RL_trail_link">
+    <inertial>
+      <origin
+        xyz="-0.184187892845849 -0.0340661587483505 -0.0158812661166708"
+        rpy="0 0 0" />
+      <mass
+        value="10.0" />
+      <inertia
+        ixx="0.00113893947649078"
+        ixy="-0.00188526986886933"
+        ixz="-1.50877896647625E-05"
+        iyy="0.0109829825621892"
+        iyz="-2.74204262893233E-06"
+        izz="0.0118002186235192" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RL_trail_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RL_trail_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_trail_joint"
+    type="revolute">
+    <origin
+      xyz="-0.14 0.368 -0.025"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RL_trail_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit lower="-0.5" upper="0.5" effort="1000" velocity="10"/> 
+    <dynamics damping="10.0" friction="0.0"/>
+  </joint>
+  <link
+    name="RL_wheel_link">
+    <inertial>
+      <origin
+        xyz="1.67072082272179E-05 -3.23637327256932E-07 0.108800844268292"
+        rpy="0 0 0" />
+      <mass
+        value="23.0" />
+      <inertia
+        ixx="0.511681628663902"
+        ixy="1.81998574665403E-07"
+        ixz="-1.44458269203041E-05"
+        iyy="0.511715172253875"
+        iyz="1.21506684344624E-07"
+        izz="0.888108856578015" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RL_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/RL_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.34039 -0.062962 -0.085"
+      rpy="-3.1416 0 -3.1416" />
+    <parent
+      link="RL_trail_link" />
+    <child
+      link="RL_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FR_trail_link">
+    <inertial>
+      <origin
+        xyz="-0.184187892880158 -0.0340661587588772 -0.0158812661304365"
+        rpy="0 0 0" />
+      <mass
+        value="10.0" />
+      <inertia
+        ixx="0.00113893947677355"
+        ixy="-0.00188526986909074"
+        ixz="-1.50877896894358E-05"
+        iyy="0.0109829825626542"
+        iyz="-2.74204266339918E-06"
+        izz="0.011800218624257" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FR_trail_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FR_trail_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_trail_joint"
+    type="revolute">
+    <origin
+      xyz="0.14 -0.368 -0.025"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR_trail_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit lower="-0.5" upper="0.5" effort="1000" velocity="10"/> 
+    <dynamics damping="10.0" friction="0.0"/>
+  </joint>
+  <link
+    name="FR_wheel_link">
+    <inertial>
+      <origin
+        xyz="9.9709E-06 -1.3416E-05 -0.1048"
+        rpy="0 0 0" />
+      <mass
+        value="23.0" />
+      <inertia
+        ixx="0.5117"
+        ixy="1.5921E-05"
+        ixz="8.4932E-06"
+        iyy="0.51169"
+        iyz="-1.1689E-05"
+        izz="0.88811" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FR_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FR_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.34039 -0.062962 -0.069"
+      rpy="0 0 0" />
+    <parent
+      link="FR_trail_link" />
+    <child
+      link="FR_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="FL_trail_link">
+    <inertial>
+      <origin
+        xyz="0.170221256392294 -0.0275656142127901 -0.005449036821015"
+        rpy="0 0 0" />
+      <mass
+        value="10.0" />
+      <inertia
+        ixx="0.000715366844500466"
+        ixy="0.00148719164269251"
+        ixz="1.50700530514997E-05"
+        iyy="0.00870189719204063"
+        iyz="-2.78696868636591E-06"
+        izz="0.00910712567819076" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FL_trail_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FL_trail_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_trail_joint"
+    type="revolute">
+    <origin
+      xyz="0.14 0.368 -0.025"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL_trail_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit lower="-0.5" upper="0.5" effort="1000" velocity="10"/> 
+    <dynamics damping="10.0" friction="0.0"/>
+  </joint>
+  <link
+    name="FL_wheel_link">
+    <inertial>
+      <origin
+        xyz="9.97088520321432E-06 1.34158735634049E-05 0.108800844310035"
+        rpy="0 0 0" />
+      <mass
+        value="23.0" />
+      <inertia
+        ixx="0.511703679021303"
+        ixy="-1.59209391715468E-05"
+        ixz="-8.49318904375484E-06"
+        iyy="0.511693121877798"
+        iyz="-1.16894867463921E-05"
+        izz="0.888108856555531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FL_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/FL_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.34039 -0.062962 -0.085"
+      rpy="-3.1416 0 -3.1416" />
+    <parent
+      link="FL_trail_link" />
+    <child
+      link="FL_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+  <gazebo>
+    <plugin filename="gz-sim-joint-controller-system"
+        name="gz::sim::systems::JointController">
+        <joint_name>FR_wheel_joint</joint_name>
+        <initial_velocity>0.0</initial_velocity>
+        <topic>front_right_command</topic>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin filename="gz-sim-joint-controller-system"
+        name="gz::sim::systems::JointController">
+        <joint_name>FL_wheel_joint</joint_name>
+        <initial_velocity>0.0</initial_velocity>
+        <topic>front_left_command</topic>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin filename="gz-sim-joint-controller-system"
+        name="gz::sim::systems::JointController">
+        <joint_name>RR_wheel_joint</joint_name>
+        <initial_velocity>0.0</initial_velocity>
+        <topic>back_right_command</topic>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin filename="gz-sim-joint-controller-system"
+        name="gz::sim::systems::JointController">
+        <joint_name>RL_wheel_joint</joint_name>
+        <initial_velocity>0.0</initial_velocity>
+        <topic>back_left_command</topic>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin
+        filename="gz-sim-joint-state-publisher-system"
+        name="gz::sim::systems::JointStatePublisher">
+        <topic>joint_states</topic>
+        <joint_name>FR_wheel_joint</joint_name>
+        <joint_name>FL_wheel_joint</joint_name>
+        <joint_name>RR_wheel_joint</joint_name>
+        <joint_name>RL_wheel_joint</joint_name>
+
+        <joint_name>FR_trail_joint</joint_name>
+        <joint_name>FL_trail_joint</joint_name>
+        <joint_name>RR_trail_joint</joint_name>
+        <joint_name>RL_trail_joint</joint_name>
+    </plugin>
+  </gazebo>
+  
+</robot>
