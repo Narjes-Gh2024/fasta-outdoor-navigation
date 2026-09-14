@@ -38,7 +38,7 @@ def generate_launch_description():
     static_tf_lidar = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=['0', '0', '0.5', '1.5718', '0', '0', 'base_link', 'sim_lidar'], 
+        arguments=['0', '0', '0.5', '0', '0', '0', 'base_link', 'sim_lidar'], 
         condition=IfCondition(LaunchConfiguration('isaac_sim'))
     )
     
