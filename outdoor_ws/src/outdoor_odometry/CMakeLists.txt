@@ -52,9 +52,26 @@ ament_target_dependencies(encoder_odometry_node
 
 target_compile_features(encoder_odometry_node PUBLIC cxx_std_17)
 
+
+add_executable(odometry_state_machine_node
+  src/odometry_state_machine.cpp
+)
+
+ament_target_dependencies(odometry_state_machine_node
+  rclcpp
+  geometry_msgs
+  tf2_ros
+  nav_msgs
+  tf2_geometry_msgs
+  sensor_msgs
+)
+
+target_compile_features(odometry_state_machine_node PUBLIC cxx_std_17)
+
 install(TARGETS
   frame_converter_node
   encoder_odometry_node
+  odometry_state_machine_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

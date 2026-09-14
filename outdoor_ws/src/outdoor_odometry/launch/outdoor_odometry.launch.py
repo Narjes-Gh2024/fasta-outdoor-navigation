@@ -10,6 +10,7 @@ def generate_launch_description():
     outdoor_odometry_dir = get_package_share_directory("outdoor_odometry")
     fast_lio_dir = get_package_share_directory("fast_lio")
     config_file_lidar_odometry = os.path.join(fast_lio_dir, "config", "rslidar.yaml")
+    config_file_odometry_backup = os.path.join(outdoor_odometry_dir, "config", "backup_odometry.yaml")
         
     return LaunchDescription([
         
@@ -35,6 +36,13 @@ def generate_launch_description():
             parameters=[config_file_lidar_odometry],
         ),
 
+        Node(
+            package='robot_localization',
+            executable='ekf_node',
+            name='odometry_backup_ekf_node',
+            output='screen',
+            parameters=[config_file_odometry_backup],
+        )
         # Node(
         #     package='outdoor_odometry',
         #     executable='odometry_state_machine_node',

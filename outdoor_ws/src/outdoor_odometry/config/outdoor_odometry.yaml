@@ -3,8 +3,8 @@ encoder_odometry_node:
     odom_frame_id: "odom"
     base_frame_id: "base_link"
     odom_topic: "/encoder_odom"
-    wheel_base: 0.5
-    wheel_radius: 0.1
+    wheel_base: 1.0
+    wheel_radius: 0.25
     simulation_mode: true
 
 frame_converter_node:

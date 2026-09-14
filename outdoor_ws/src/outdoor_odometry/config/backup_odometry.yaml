@@ -1,0 +1,68 @@
+### ekf.yaml
+### Fuses /encoder_odom (wheel odometry) and /imu into a single filtered odom->base_link estimate
+
+odometry_backup_ekf_node:
+  ros__parameters:
+
+    frequency: 50.0
+    sensor_timeout: 0.1
+    two_d_mode: false        # set true only if the robot is strictly flat/indoor;
+                              # false lets IMU roll/pitch contribute (recommended for outdoor/uneven terrain)
+    print_diagnostics: true
+    debug: false
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom          # this EKF instance publishes odom->base_link (local, continuous)
+
+    publish_tf: false
+    publish_acceleration: false
+
+    use_sim_time: true        # set true if running in simulation
+
+    # --- Wheel encoder odometry ---
+    # x, y position + yaw orientation + vx, vyaw twist are reliable; z/roll/pitch/vy not produced by diff-drive kinematics
+    odom0: /encoder_odom
+    odom0_config: [true,  true,  false,
+                   false, false, true,
+                   true,  false, false,
+                   false, false, true,
+                   false, false, false]
+    odom0_differential: false
+    odom0_relative: false
+    odom0_queue_size: 10
+    odom0_nodelay: true
+
+    # --- IMU ---
+    # Full orientation (roll/pitch/yaw) and angular velocity are reliable; no linear velocity from IMU.
+    # Linear acceleration included so the filter can help estimate vx/vy if odom is momentarily unavailable.
+    imu0: /imu
+    imu0_config: [false, false, false,
+                  false,  false,  false,
+                  false, false, false,
+                  true,  true,  true,
+                  true,  true,  true]
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 10
+    imu0_nodelay: true
+    imu0_remove_gravitational_acceleration: true
+
+    # Process noise covariance (tune if the filter is too sluggish or too jumpy).
+    # Diagonal of the 15x15 matrix, same [x,y,z,roll,pitch,yaw,vx,vy,vz,vroll,vpitch,vyaw,ax,ay,az] order.
+    process_noise_covariance: [0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.06, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.03, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.03, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.06, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025,0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025,0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.04, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.02, 0.0,  0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,
+                                0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.015]

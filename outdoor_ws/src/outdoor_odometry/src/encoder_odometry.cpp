@@ -76,6 +76,7 @@ class EncoderOdometry : public rclcpp::Node
                 bl_q = -msg->position[6];
                 fl_qdot = -msg->velocity[4];
                 bl_qdot = -msg->velocity[6];
+                dt = dt * 2;
             }
             else
             {
@@ -94,7 +95,6 @@ class EncoderOdometry : public rclcpp::Node
 
             if (fl_qdot != fr_qdot || bl_qdot != br_qdot)
             {
-                RCLCPP_WARN(this->get_logger(), "Wheel encoder values are inconsistent!");
                 left_q = (fl_q + bl_q) / 2.0;
                 right_q = (fr_q + br_q) / 2.0;
                 left_qdot = (fl_qdot + bl_qdot) / 2.0;
@@ -116,6 +116,7 @@ class EncoderOdometry : public rclcpp::Node
             double vx = (left_v + right_v) / 2.0;
             double vy = 0.0;
             double wz = (right_v - left_v) / wheel_base_;
+            RCLCPP_INFO(this->get_logger(), "Value of dt is: (%.6f)", dt);
 
             // --- Persistent state: integrate into accumulated pose ---
             theta_ += wz * dt;
