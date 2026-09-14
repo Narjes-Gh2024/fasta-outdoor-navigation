@@ -76,7 +76,6 @@ class EncoderOdometry : public rclcpp::Node
                 bl_q = -msg->position[6];
                 fl_qdot = -msg->velocity[4];
                 bl_qdot = -msg->velocity[6];
-                dt = dt * 2;
             }
             else
             {

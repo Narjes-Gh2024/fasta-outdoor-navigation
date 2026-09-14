@@ -42,11 +42,12 @@ def generate_launch_description():
             name='odometry_backup_ekf_node',
             output='screen',
             parameters=[config_file_odometry_backup],
-        )
-        # Node(
-        #     package='outdoor_odometry',
-        #     executable='odometry_state_machine_node',
-        #     name='odometry_state_machine_node',
-        #     output='screen',
-        # ),
+        ),
+
+        Node(
+            package='outdoor_odometry',
+            executable='odometry_state_machine_node',
+            name='odometry_state_machine_node',
+            output='screen',
+        ),
     ])
