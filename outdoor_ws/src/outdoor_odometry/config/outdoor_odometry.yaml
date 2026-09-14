@@ -1,0 +1,19 @@
+encoder_odometry_node:
+  ros__parameters:
+    odom_frame_id: "odom"
+    base_frame_id: "base_link"
+    odom_topic: "/encoder_odom"
+    wheel_base: 0.5
+    wheel_radius: 0.1
+    simulation_mode: true
+
+frame_converter_node:
+  ros__parameters:
+    lidar_frame_id: "sim_lidar"
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    lidar_odometry_odom_frame_id: "camera_init"
+    lidar_odometry_base_frame_id: "body"
+    lidar_odometry_topic: "/Odometry"
+    odom_topic: "/odom"
+    publish_tf: true
