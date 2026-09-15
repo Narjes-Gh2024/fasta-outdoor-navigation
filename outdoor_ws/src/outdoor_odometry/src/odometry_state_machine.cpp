@@ -92,8 +92,6 @@ class OdometryStateMachine : public rclcpp::Node
 
         void lidarOdomCallback(const nav_msgs::msg::Odometry::SharedPtr msg)
         {
-            // Verify the TF chain odom->base_link is actually resolvable right now,
-            // not just that a message arrived on the topic.
             bool tf_ok = tf_buffer_->canTransform(
                 odom_frame_id_, base_frame_id_, tf2::TimePointZero);
 
@@ -102,7 +100,7 @@ class OdometryStateMachine : public rclcpp::Node
                 RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 5000,
                     "Received /%s message but %s->%s TF is not available",
                     lidar_odometry_topic_.c_str(), odom_frame_id_.c_str(), base_frame_id_.c_str());
-                return;  // don't count this as a valid reception
+                return; 
             }
 
             OdomSource previous_source;
