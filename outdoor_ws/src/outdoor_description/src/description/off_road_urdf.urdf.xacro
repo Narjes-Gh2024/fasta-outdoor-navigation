@@ -1,20 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="outdoor_description">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-8.17927536369341E-17 -1.3950931901084E-15 0.130545650801935"
+        xyz="0.146261722213942 0.000543929627490959 0.206998435056227"
         rpy="0 0 0" />
       <mass
-        value="150.8233509085438" />
+        value="81.8728040761975" />
       <inertia
-        ixx="0.265440261208668"
-        ixy="-2.10459838722132E-17"
-        ixz="-1.53164849370567E-18"
-        iyy="0.496368289840211"
-        iyz="-8.4667989116219E-18"
-        izz="0.727766670019649" />
+        ixx="0.928332742280751"
+        ixy="-0.000538381152275935"
+        ixz="7.82462972412944E-05"
+        iyy="2.12205079983374"
+        iyz="3.95382316209524E-06"
+        izz="2.87255178322061" />
     </inertial>
     <visual>
       <origin
@@ -22,100 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/chasis_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/chasis_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <link
-    name="RR_shock_link">
-    <inertial>
-      <origin
-        xyz="0.0763011366291501 -0.127044297188698 -0.0299999999999999"
-        rpy="0 0 0" />
-      <mass
-        value="0.715806847837399" />
-      <inertia
-        ixx="0.0032248150763536"
-        ixy="0.00174143303645499"
-        ixz="-2.46129502123765E-19"
-        iyy="0.00137114459053517"
-        iyz="4.50388440234553E-19"
-        izz="0.00427194248962654" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/RR_shock_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/RR_shock_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="RR_shock_joint"
-    type="continuous">
-    <origin
-      xyz="-0.535 -0.435 0.2503"
-      rpy="1.5708 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="RR_shock_link" />
-    <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="RR_trail_link">
-    <inertial>
-      <origin
-        xyz="-0.170221256392297 -0.0275656142127739 0.0543490368210151"
-        rpy="0 0 0" />
-      <mass
-        value="1.40947256833333" />
-      <inertia
-        ixx="0.000715366844500184"
-        ixy="-0.00148719164269175"
-        ixz="1.50700530514993E-05"
-        iyy="0.00870189719204092"
-        iyz="2.78696868636341E-06"
-        izz="0.00910712567819077" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/RR_trail_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -129,40 +36,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/RR_trail_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
-  <joint
-    name="RR_trail_joint"
-    type="revolute">
-    <origin
-      xyz="-0.140000000000002 -0.3191 -0.0249999999999823"
-      rpy="1.5707963267949 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="RR_trail_link" />
-    <axis
-      xyz="0 0 -1" />
-    <limit lower="-0.5" upper="0.5" effort="1000" velocity="10"/> 
-    <dynamics damping="10.0" friction="0.0"/>
-  </joint>
   <link
-    name="RR_wheel_link">
+    name="tu1_l">
     <inertial>
       <origin
-        xyz="-1.2532997081427E-05 -1.10631541935108E-05 0.108800844281904"
+        xyz="0.147362309153983 -0.0333159854188 -0.1211687926663"
         rpy="0 0 0" />
       <mass
-        value="16.1357411526016" />
+        value="10.2132979097438" />
       <inertia
-        ixx="0.51169679883732"
-        ixy="-1.66959054129079E-05"
-        ixz="1.07251073346353E-05"
-        iyy="0.511700003530438"
-        iyz="9.68060231163269E-06"
-        izz="0.888108857610364" />
+        ixx="0.0358725371406297"
+        ixy="1.21406315693586E-05"
+        ixz="0.0375003251759691"
+        iyy="0.085464141095508"
+        iyz="-9.48193435836396E-06"
+        izz="0.0506422080598156" />
     </inertial>
     <visual>
       <origin
@@ -170,12 +62,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/RR_wheel_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/tu1_l.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.0 0.0 0.0 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -184,91 +76,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/RR_wheel_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/tu1_l.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="RR_wheel_joint"
+    name="tu1_j"
     type="continuous">
     <origin
-      xyz="-0.340392790463809 -0.0629622958633592 0.129955999999654"
+      xyz="0.33 -0.354 0.215"
       rpy="0 0 0" />
     <parent
-      link="RR_trail_link" />
-    <child
-      link="RR_wheel_link" />
-    <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="RL_shock_link">
-    <inertial>
-      <origin
-        xyz="0.0763011366291501 -0.127044297188698 -0.019"
-        rpy="0 0 0" />
-      <mass
-        value="0.715806847837399" />
-      <inertia
-        ixx="0.0032248150763536"
-        ixy="0.00174143303645499"
-        ixz="-2.14882926883257E-19"
-        iyy="0.00137114459053517"
-        iyz="4.62362146909426E-19"
-        izz="0.00427194248962654" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/RL_shock_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/RL_shock_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="RL_shock_joint"
-    type="continuous">
-    <origin
-      xyz="-0.535 0.385 0.2503"
-      rpy="1.5708 0 0" />
-    <parent
       link="base_link" />
     <child
-      link="RL_shock_link" />
+      link="tu1_l" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 1 0" />
   </joint>
   <link
-    name="RL_trail_link">
+    name="W1_l">
     <inertial>
       <origin
-        xyz="-0.184187892845849 -0.0340661587483505 -0.0158812661166708"
+        xyz="1.71696358072237E-05 0.025264976547993 2.02005059561465E-06"
         rpy="0 0 0" />
       <mass
-        value="1.73653470079732" />
+        value="16.9385252789344" />
       <inertia
-        ixx="0.00113893947649078"
-        ixy="-0.00188526986886933"
-        ixz="-1.50877896647625E-05"
-        iyy="0.0109829825621892"
-        iyz="-2.74204262893233E-06"
-        izz="0.0118002186235192" />
+        ixx="0.513537561453538"
+        ixy="1.43363347826961E-05"
+        ixz="-6.77351136120244E-06"
+        iyy="0.891763002094289"
+        iyz="3.03339596888524E-06"
+        izz="0.513567792828017" />
     </inertial>
     <visual>
       <origin
@@ -276,7 +115,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/RL_trail_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/W1_l.STL" />
       </geometry>
       <material
         name="">
@@ -290,250 +129,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/RL_trail_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/W1_l.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="RL_trail_joint"
+    name="W1_j"
     type="continuous">
     <origin
-      xyz="-0.14 0.368 -0.025"
-      rpy="1.5708 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="RL_trail_link" />
-    <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="RL_wheel_link">
-    <inertial>
-      <origin
-        xyz="1.67072082272179E-05 -3.23637327256932E-07 0.108800844268292"
-        rpy="0 0 0" />
-      <mass
-        value="16.1357411424806" />
-      <inertia
-        ixx="0.511681628663902"
-        ixy="1.81998574665403E-07"
-        ixz="-1.44458269203041E-05"
-        iyy="0.511715172253875"
-        iyz="1.21506684344624E-07"
-        izz="0.888108856578015" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/RL_wheel_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.0 0.0 0.0 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/RL_wheel_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="RL_wheel_joint"
-    type="continuous">
-    <origin
-      xyz="-0.34039 -0.062962 -0.085"
-      rpy="-3.1416 0 -3.1416" />
-    <parent
-      link="RL_trail_link" />
-    <child
-      link="RL_wheel_link" />
-    <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="FR_shock_link">
-    <inertial>
-      <origin
-        xyz="-0.0763011366291481 -0.127044297188701 0.0189999999999925"
-        rpy="0 0 0" />
-      <mass
-        value="0.715806847837399" />
-      <inertia
-        ixx="0.00322481507635361"
-        ixy="-0.00174143303645499"
-        ixz="5.54202812938765E-19"
-        iyy="0.00137114459053516"
-        iyz="9.52777764281862E-19"
-        izz="0.00427194248962654" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FR_shock_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FR_shock_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="FR_shock_joint"
-    type="continuous">
-    <origin
-      xyz="0.535 -0.385 0.2503"
-      rpy="1.5708 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="FR_shock_link" />
-    <axis
-      xyz="0 0 1" />
-  </joint>
-  <link
-    name="FR_trail_link">
-    <inertial>
-      <origin
-        xyz="-0.184187892880158 -0.0340661587588772 -0.0158812661304365"
-        rpy="0 0 0" />
-      <mass
-        value="1.73653470114079" />
-      <inertia
-        ixx="0.00113893947677355"
-        ixy="-0.00188526986909074"
-        ixz="-1.50877896894358E-05"
-        iyy="0.0109829825626542"
-        iyz="-2.74204266339918E-06"
-        izz="0.011800218624257" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FR_trail_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FR_trail_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="FR_trail_joint"
-    type="continuous">
-    <origin
-      xyz="0.14 -0.368 -0.025"
-      rpy="1.5708 0 -3.1416" />
-    <parent
-      link="base_link" />
-    <child
-      link="FR_trail_link" />
-    <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="FR_wheel_link">
-    <inertial>
-      <origin
-        xyz="9.9709E-06 -1.3416E-05 -0.1048"
-        rpy="0 0 0" />
-      <mass
-        value="16.136" />
-      <inertia
-        ixx="0.5117"
-        ixy="1.5921E-05"
-        ixz="8.4932E-06"
-        iyy="0.51169"
-        iyz="-1.1689E-05"
-        izz="0.88811" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FR_wheel_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.0 0.0 0.0 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FR_wheel_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="FR_wheel_joint"
-    type="continuous">
-    <origin
-      xyz="-0.34039 -0.062962 -0.069"
+      xyz="0.26738 -0.229 -0.21986"
       rpy="0 0 0" />
     <parent
-      link="FR_trail_link" />
+      link="tu1_l" />
     <child
-      link="FR_wheel_link" />
+      link="W1_l" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 1 0" />
   </joint>
   <link
-    name="FL_shock_link">
+    name="tu2_l">
     <inertial>
       <origin
-        xyz="0.0763011366291473 -0.127044297188705 0.0189999999999999"
+        xyz="-0.137021532460763 -0.0195472382042864 -0.105386640443532"
         rpy="0 0 0" />
       <mass
-        value="0.715806847837399" />
+        value="7.72532312777463" />
       <inertia
-        ixx="0.00322481507635359"
-        ixy="0.001741433036455"
-        ixz="5.84433520660502E-19"
-        iyy="0.00137114459053518"
-        iyz="-9.25097340450963E-19"
-        izz="0.00427194248962654" />
+        ixx="0.0263090204959749"
+        ixy="-1.1837838277264E-05"
+        ixz="-0.0295137315066913"
+        iyy="0.0639279889046924"
+        iyz="-9.73341041293776E-06"
+        izz="0.0385789482600205" />
     </inertial>
     <visual>
       <origin
@@ -541,60 +168,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/FL_shock_link.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FL_shock_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="FL_shock_joint"
-    type="continuous">
-    <origin
-      xyz="0.535 0.385 0.2503"
-      rpy="1.5708 0 -3.1416" />
-    <parent
-      link="base_link" />
-    <child
-      link="FL_shock_link" />
-    <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="FL_trail_link">
-    <inertial>
-      <origin
-        xyz="0.170221256392294 -0.0275656142127901 -0.005449036821015"
-        rpy="0 0 0" />
-      <mass
-        value="1.40947256833333" />
-      <inertia
-        ixx="0.000715366844500466"
-        ixy="0.00148719164269251"
-        ixz="1.50700530514997E-05"
-        iyy="0.00870189719204063"
-        iyz="-2.78696868636591E-06"
-        izz="0.00910712567819076" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://outdoor_description/src/description/meshes/FL_trail_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/tu2_l.STL" />
       </geometry>
       <material
         name="">
@@ -608,38 +182,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/FL_trail_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/tu2_l.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="FL_trail_joint"
+    name="tu2_j"
     type="continuous">
     <origin
-      xyz="0.14 0.368 -0.025"
-      rpy="1.5708 0 0" />
+      xyz="-0.04 -0.354 0.215"
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
-      link="FL_trail_link" />
+      link="tu2_l" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 1 0" />
   </joint>
   <link
-    name="FL_wheel_link">
+    name="W2_l">
     <inertial>
       <origin
-        xyz="9.97088520321432E-06 1.34158735634049E-05 0.108800844310035"
+        xyz="1.57026386815029E-05 0.0252649765331265 -7.22875534110018E-06"
         rpy="0 0 0" />
       <mass
-        value="16.1357411615997" />
+        value="16.9385252782885" />
       <inertia
-        ixx="0.511703679021303"
-        ixy="-1.59209391715468E-05"
-        ixz="-8.49318904375484E-06"
-        iyy="0.511693121877798"
-        iyz="-1.16894867463921E-05"
-        izz="0.888108856555531" />
+        ixx="0.513539751870816"
+        ixy="1.38143287927479E-05"
+        ixz="1.03596150509659E-05"
+        iyy="0.891763001369152"
+        iyz="-4.88646576774158E-06"
+        izz="0.51356560120949" />
     </inertial>
     <visual>
       <origin
@@ -647,12 +221,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/FL_wheel_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/W2_l.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.0 0.0 0.0 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -661,21 +235,889 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://outdoor_description/src/description/meshes/FL_wheel_link.STL" />
+          filename="package://outdoor_description/src/description/meshes/W2_l.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="FL_wheel_joint"
+    name="W2_j"
     type="continuous">
     <origin
-      xyz="0.34039 -0.062962 -0.085"
-      rpy="-3.1416 0 -3.1416" />
+      xyz="-0.26738 -0.229 -0.21986"
+      rpy="0 0 0" />
     <parent
-      link="FL_trail_link" />
+      link="tu2_l" />
     <child
-      link="FL_wheel_link" />
+      link="W2_l" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="tu3_l">
+    <inertial>
+      <origin
+        xyz="-0.147362309060457 0.033315985364701 -0.121168792605429"
+        rpy="0 0 0" />
+      <mass
+        value="10.2132979014202" />
+      <inertia
+        ixx="0.035872537136603"
+        ixy="1.21406317571704E-05"
+        ixz="-0.0375003251787922"
+        iyy="0.0854641410781346"
+        iyz="9.48193521425474E-06"
+        izz="0.0506422080461984" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/tu3_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/tu3_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tu3_j"
+    type="continuous">
+    <origin
+      xyz="-0.04 0.354 0.215"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="tu3_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="W3_l">
+    <inertial>
+      <origin
+        xyz="1.28236511909852E-05 -0.0252649764628815 1.15891516132491E-05"
+        rpy="0 0 0" />
+      <mass
+        value="16.9385252831856" />
+      <inertia
+        ixx="0.513547983602694"
+        ixy="-1.17227568826066E-05"
+        ixz="-1.58860807859731E-05"
+        iyy="0.891763001235492"
+        iyz="-8.79424995869041E-06"
+        izz="0.5135573693724" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W3_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W3_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W3_j"
+    type="continuous">
+    <origin
+      xyz="-0.26738 0.229 -0.21986"
+      rpy="0 0 0" />
+    <parent
+      link="tu3_l" />
+    <child
+      link="W3_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="tu4_l">
+    <inertial>
+      <origin
+        xyz="0.137021532460767 0.0195472382042849 -0.105386640443537"
+        rpy="0 0 0" />
+      <mass
+        value="7.72532312777463" />
+      <inertia
+        ixx="0.0263090204959758"
+        ixy="-1.18378382770741E-05"
+        ixz="0.0295137315066914"
+        iyy="0.0639279889046924"
+        iyz="9.7334104127751E-06"
+        izz="0.0385789482600198" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/tu4_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/tu4_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tu4_j"
+    type="continuous">
+    <origin
+      xyz="0.33 0.354 0.215"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="tu4_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="W4_l">
+    <inertial>
+      <origin
+        xyz="6.34908103325227E-06 -0.0252649765321394 1.60723253489125E-05"
+        rpy="0 0 0" />
+      <mass
+        value="16.9385252734549" />
+      <inertia
+        ixx="0.513562463994304"
+        ixy="-6.60421430566672E-06"
+        ixz="-1.33643913919196E-05"
+        iyy="0.891763002998777"
+        iyz="-1.30801582093694E-05"
+        izz="0.513542891684021" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W4_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W4_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W4_j"
+    type="continuous">
+    <origin
+      xyz="0.26738 0.229 -0.21986"
+      rpy="0 0 0" />
+    <parent
+      link="tu4_l" />
+    <child
+      link="W4_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="su1_l">
+    <inertial>
+      <origin
+        xyz="-0.0953428362833662 5.55111512312578E-17 -0.113454221906962"
+        rpy="0 0 0" />
+      <mass
+        value="0.7158068478374" />
+      <inertia
+        ixx="0.0026376572344764"
+        ixy="2.35357533317608E-19"
+        ixz="-0.00194325290458643"
+        iyy="0.00427194248962655"
+        iyz="2.7115336692116E-19"
+        izz="0.00195830243241237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su1_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su1_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="su1_j"
+    type="continuous">
+    <origin
+      xyz="0.805 -0.404 0.295"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="su1_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sm1_l">
+    <inertial>
+      <origin
+        xyz="-0.0107415978133949 0 -0.0127820785437341"
+        rpy="0 0 0" />
+      <mass
+        value="0.7158068478374" />
+      <inertia
+        ixx="0.00263765723447639"
+        ixy="2.33773728583059E-19"
+        ixz="-0.00194325290458643"
+        iyy="0.00427194248962655"
+        iyz="2.73469671214538E-19"
+        izz="0.00195830243241239" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm1_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm1_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sm1_j"
+    type="prismatic">
+    <origin
+      xyz="-0.084601 0 -0.10067"
+      rpy="0 0 0" />
+    <parent
+      link="su1_l" />
+    <child
+      link="sm1_l" />
+    <axis
+      xyz="0.64336 0 0.76557" />
+    <limit
+      lower="-0.05"
+      upper="0.05"
+      effort="2000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="w1_l">
+    <inertial>
+      <origin
+        xyz="1.71696358072237E-05 0.0252649765479932 2.02005059565108E-06"
+        rpy="0 0 0" />
+      <mass
+        value="16.9385252789344" />
+      <inertia
+        ixx="0.513537561453534"
+        ixy="1.43363347829446E-05"
+        ixz="-6.77351136034503E-06"
+        iyy="0.891763002094288"
+        iyz="3.03339597483852E-06"
+        izz="0.513567792828014" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W1_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W1_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w1_j"
+    type="continuous">
+    <origin
+      xyz="-0.12302 -0.179 -0.19919"
+      rpy="0 0 0" />
+    <parent
+      link="sm1_l" />
+    <child
+      link="w1_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="su2_l">
+    <inertial>
+      <origin
+        xyz="0.0953428362833642 -7.21644966006352E-16 -0.113454221906967"
+        rpy="0 0 0" />
+      <mass
+        value="0.715806847837399" />
+      <inertia
+        ixx="0.0026376572344764"
+        ixy="6.07066484333718E-18"
+        ixz="0.00194325290458643"
+        iyy="0.00427194248962655"
+        iyz="-7.1815211391436E-18"
+        izz="0.00195830243241238" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su2_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su2_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="su2_j"
+    type="continuous">
+    <origin
+      xyz="-0.515 -0.405 0.295"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="su2_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sm2_l">
+    <inertial>
+      <origin
+        xyz="0.0107415978133951 2.05391259555654E-15 -0.012782078543734"
+        rpy="0 0 0" />
+      <mass
+        value="0.715806847837399" />
+      <inertia
+        ixx="0.00263765723447641"
+        ixy="6.07066484333715E-18"
+        ixz="0.00194325290458642"
+        iyy="0.00427194248962655"
+        iyz="-7.18152113914362E-18"
+        izz="0.00195830243241236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm2_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm2_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sm2_j"
+    type="prismatic">
+    <origin
+      xyz="0.084601 0 -0.10067"
+      rpy="0 0 0" />
+    <parent
+      link="su2_l" />
+    <child
+      link="sm2_l" />
+    <axis
+      xyz="-0.64336 0 0.76557" />
+    <limit
+      lower="-0.05"
+      upper="0.05"
+      effort="2000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="w2_l">
+    <inertial>
+      <origin
+        xyz="1.57026386815584E-05 0.0252649765331266 -7.22875534110191E-06"
+        rpy="0 0 0" />
+      <mass
+        value="16.9385252782884" />
+      <inertia
+        ixx="0.513539751870783"
+        ixy="1.38143288037455E-05"
+        ixz="1.03596150466106E-05"
+        iyy="0.891763001369155"
+        iyz="-4.88646576072705E-06"
+        izz="0.513565601209458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W2_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W2_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w2_j"
+    type="continuous">
+    <origin
+      xyz="0.12302 -0.178 -0.19919"
+      rpy="0 0 0" />
+    <parent
+      link="sm2_l" />
+    <child
+      link="w2_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="su3_l">
+    <inertial>
+      <origin
+        xyz="0.0953428362833642 -9.88098491916389E-15 -0.113454221906967"
+        rpy="0 0 0" />
+      <mass
+        value="0.715806847837399" />
+      <inertia
+        ixx="0.0026376572344764"
+        ixy="6.55681156021957E-18"
+        ixz="0.00194325290458642"
+        iyy="0.00427194248962654"
+        iyz="-7.80702679737805E-18"
+        izz="0.00195830243241237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su3_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su3_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="su3_j"
+    type="continuous">
+    <origin
+      xyz="-0.515 0.405 0.295"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="su3_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sm3_l">
+    <inertial>
+      <origin
+        xyz="0.010741597813395 9.43689570931383E-16 -0.0127820785437343"
+        rpy="0 0 0" />
+      <mass
+        value="0.715806847837399" />
+      <inertia
+        ixx="0.00263765723447641"
+        ixy="-2.27654101192946E-19"
+        ixz="0.00194325290458642"
+        iyy="0.00427194248962654"
+        iyz="2.7135972154027E-19"
+        izz="0.00195830243241236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm3_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm3_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sm3_j"
+    type="prismatic">
+    <origin
+      xyz="0.084601 0 -0.10067"
+      rpy="0 0 0" />
+    <parent
+      link="su3_l" />
+    <child
+      link="sm3_l" />
+    <axis
+      xyz="-0.64336 0 0.76557" />
+    <limit
+      lower="-0.05"
+      upper="0.05"
+      effort="2000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="w3_l">
+    <inertial>
+      <origin
+        xyz="1.28236511908741E-05 -0.0252649764628814 1.15891516133063E-05"
+        rpy="0 0 0" />
+      <mass
+        value="16.9385252831856" />
+      <inertia
+        ixx="0.513547983602772"
+        ixy="-1.17227568905978E-05"
+        ixz="-1.58860807865793E-05"
+        iyy="0.891763001235491"
+        iyz="-8.79425000580258E-06"
+        izz="0.513557369372476" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W3_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W3_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w3_j"
+    type="continuous">
+    <origin
+      xyz="0.12302 0.178 -0.19919"
+      rpy="0 0 0" />
+    <parent
+      link="sm3_l" />
+    <child
+      link="w3_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="su4_l">
+    <inertial>
+      <origin
+        xyz="-0.0953428362833703 2.27595720048157E-15 -0.113454221906963"
+        rpy="0 0 0" />
+      <mass
+        value="0.715806847837399" />
+      <inertia
+        ixx="0.00263765723447619"
+        ixy="-6.57206200530997E-18"
+        ixz="-0.00194325290458646"
+        iyy="0.00427194248962654"
+        iyz="-7.82429751091541E-18"
+        izz="0.00195830243241258" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su4_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/su4_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="su4_j"
+    type="continuous">
+    <origin
+      xyz="0.805 0.404 0.295"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="su4_l" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sm4_l">
+    <inertial>
+      <origin
+        xyz="-0.0107415978133959 -2.72004641033163E-15 -0.0127820785437335"
+        rpy="0 0 0" />
+      <mass
+        value="0.715806847837399" />
+      <inertia
+        ixx="0.00263765723447619"
+        ixy="-6.57206200530997E-18"
+        ixz="-0.00194325290458646"
+        iyy="0.00427194248962654"
+        iyz="-7.82429751091541E-18"
+        izz="0.00195830243241258" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm4_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/sm4_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sm4_j"
+    type="prismatic">
+    <origin
+      xyz="-0.084601 0 -0.10067"
+      rpy="0 0 0" />
+    <parent
+      link="su4_l" />
+    <child
+      link="sm4_l" />
+    <axis
+      xyz="0.64336 0 0.76557" />
+    <limit
+      lower="-0.05"
+      upper="0.05"
+      effort="2000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="w4_l">
+    <inertial>
+      <origin
+        xyz="6.34908103358534E-06 -0.0252649765321398 1.60723253488327E-05"
+        rpy="0 0 0" />
+      <mass
+        value="16.9385252734549" />
+      <inertia
+        ixx="0.513562463994312"
+        ixy="-6.60421431428585E-06"
+        ixz="-1.33643913922697E-05"
+        iyy="0.891763002998782"
+        iyz="-1.30801582093984E-05"
+        izz="0.51354289168403" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W4_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://outdoor_description/src/description/meshes/W4_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w4_j"
+    type="continuous">
+    <origin
+      xyz="-0.12302 0.179 -0.19919"
+      rpy="0 0 0" />
+    <parent
+      link="sm4_l" />
+    <child
+      link="w4_l" />
+    <axis
+      xyz="0 1 0" />
   </joint>
 </robot>

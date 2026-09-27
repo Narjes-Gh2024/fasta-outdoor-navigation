@@ -4,6 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
         - /Odometry1/Shape1
         - /Odometry2/Shape1
         - /Odometry3
@@ -27,7 +28,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: PointCloud2
+    SyncSource: ""
 Visualization Manager:
   Class: ""
   Displays:
@@ -54,41 +55,31 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        FL_shock_link:
+          Value: true
         FL_trail_link:
           Value: true
         FL_wheel_link:
+          Value: true
+        FR_shock_link:
           Value: true
         FR_trail_link:
           Value: true
         FR_wheel_link:
           Value: true
+        RL_shock_link:
+          Value: true
         RL_trail_link:
           Value: true
         RL_wheel_link:
+          Value: true
+        RR_shock_link:
           Value: true
         RR_trail_link:
           Value: true
         RR_wheel_link:
           Value: true
-        back_camera:
-          Value: true
         base_link:
-          Value: true
-        body:
-          Value: true
-        camera_init:
-          Value: true
-        front_camera:
-          Value: true
-        left_camera:
-          Value: true
-        odom:
-          Value: true
-        right_camera:
-          Value: true
-        sim_imu:
-          Value: true
-        sim_lidar:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -96,31 +87,26 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        odom:
-          base_link:
-            FL_trail_link:
-              FL_wheel_link:
-                {}
-            FR_trail_link:
-              FR_wheel_link:
-                {}
-            RL_trail_link:
-              RL_wheel_link:
-                {}
-            RR_trail_link:
-              RR_wheel_link:
-                {}
-            back_camera:
+        base_link:
+          FL_shock_link:
+            {}
+          FL_trail_link:
+            FL_wheel_link:
               {}
-            front_camera:
+          FR_shock_link:
+            {}
+          FR_trail_link:
+            FR_wheel_link:
               {}
-            left_camera:
+          RL_shock_link:
+            {}
+          RL_trail_link:
+            RL_wheel_link:
               {}
-            right_camera:
-              {}
-            sim_imu:
-              {}
-            sim_lidar:
+          RR_shock_link:
+            {}
+          RR_trail_link:
+            RR_wheel_link:
               {}
       Update Interval: 0
       Value: true
@@ -369,7 +355,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: odom
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -430,7 +416,7 @@ Visualization Manager:
       Pitch: 0.3172920346260071
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: -0.7381244897842407
+      Yaw: 5.545061111450195
     Saved: ~
 Window Geometry:
   Displays:

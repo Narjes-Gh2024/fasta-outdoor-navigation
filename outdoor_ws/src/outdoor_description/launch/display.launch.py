@@ -85,6 +85,7 @@ def generate_launch_description():
         DeclareLaunchArgument(name='isaac_sim', default_value='True', description='Flag to enable Isaac Sim'),
 
         robot_state_publisher_node,
+        joint_state_publisher_gui_node,
         rviz_node, 
         static_tf_lidar,
         static_tf_imu,
