@@ -18,7 +18,13 @@ def generate_launch_description():
         parameters=[{'robot_description': Command(['xacro ', LaunchConfiguration('model')])}],
         # remappings=[('/joint_states', '/joint_command')]  # <-- REMAP HERE
     )
-
+    
+    joint_state_publisher_node = Node(
+    package='joint_state_publisher',
+    executable='joint_state_publisher',
+    name='joint_state_publisher',
+    )
+    
     joint_state_publisher_gui_node = Node(
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
@@ -85,7 +91,8 @@ def generate_launch_description():
         DeclareLaunchArgument(name='isaac_sim', default_value='True', description='Flag to enable Isaac Sim'),
 
         robot_state_publisher_node,
-        joint_state_publisher_gui_node,
+        # joint_state_publisher_gui_node,
+        joint_state_publisher_node,
         rviz_node, 
         static_tf_lidar,
         static_tf_imu,
