@@ -1,0 +1,60 @@
+twist_mux:
+  ros__parameters:
+
+    topics:
+
+      navigation:
+        topic: /cmd_vel_nav
+        timeout: 1.0
+        priority: 10
+
+      joystick:
+        topic: /cmd_vel_joy
+        timeout: 0.5
+        priority: 50
+
+      emergency:
+        topic: /cmd_vel_emergency
+        timeout: 0.2
+        priority: 100
+
+    locks:
+      emergency:
+        topic: /cmd_vel_lock
+        timeout: 0.0
+        priority: 255
+
+cmd_vel_filter_node:
+  ros__parameters:
+
+    # Filter update frequency
+    update_rate: 50.0
+
+    # Topics
+    cmd_vel_topic: "/cmd_vel_out"
+    filtered_cmd_vel_topic: "/cmd_vel_filtered"
+
+    # Acceleration limits
+    linear_acceleration_limit: 0.5
+    linear_deceleration_limit: 1.0
+
+    angular_acceleration_limit: 1.0
+    angular_deceleration_limit: 2.0
+
+    # Safety timeout
+    cmd_timeout: 0.5
+
+    
+kinematic_controller_node:
+  ros__parameters:
+
+    # Robot geometry
+    wheel_radius: 0.25
+    wheel_base: 1.116
+
+    # Topics
+    cmd_vel_topic: "/cmd_vel_filtered"
+    wheel_command_topic: "/wheel_controller/command"
+
+    # Timestep
+    cmd_timeout: 0.5

@@ -1,11 +1,30 @@
 encoder_odometry_node:
   ros__parameters:
+    # Coordinate frames used for odometry and robot base
     odom_frame_id: "odom"
     base_frame_id: "base_link"
+
+    # ROS topics
+    joint_states_topic: "/joint_states"
     odom_topic: "/encoder_odom"
-    wheel_base: 1.0
+
+    # Differential drive robot parameters
     wheel_radius: 0.25
+    wheel_base: 1.116
+
+    # Wheel joint names
+    right_wheel_joints:
+      - "w1_j" # Right Front
+      - "w2_j" # Right Rear
+    left_wheel_joints:
+      - "w4_j" # Left Rear
+      - "w3_j" # Left Front
+
+    # Simulation or real robot mode
     simulation_mode: true
+
+    # Publish odom -> base_link transform
+    publish_tf: true
 
 frame_converter_node:
   ros__parameters:
