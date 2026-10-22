@@ -1,0 +1,617 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.2.0"
+    }
+    defaultPrim = "outdoor_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp7itnoy7t/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/usdex_offroad/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/temp_offroad/offroad.usd
+
+
+Generated from Composed Stage of root layer /home/roboticlab1/fasta-outdoor-navigation/outdoor_ws/src/outdoor_description/src/description/offroad/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "outdoor_description"
+{
+    over "Geometry"
+    {
+        over "floor" (
+            prepend apiSchemas = ["NewtonCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float newton:contactGap = 0
+            float physics:density = 1000
+        }
+
+        over "base_link" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsArticulationRootAPI", "NewtonArticulationRootAPI"]
+        )
+        {
+            bool newton:selfCollisionEnabled = 0
+
+            over "tu1_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.1473623, -0.033315986, -0.12116879)
+                float3 physics:diagonalInertia = (0.035872538, 0.08546414, 0.050642207)
+                float physics:mass = 10.213298
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "W1_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.000017169636, 0.025264977, 0.0000020200505)
+                    float physics:mass = 0
+
+                    def PhysicsRevoluteJoint "W1_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    )
+                    {
+                        uniform token physics:axis = "Y"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/tu1_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu1_l/W1_l>
+                        point3f physics:localPos0 = (0.26738, -0.229, -0.21986)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (1, 0, 0, 0)
+                        quatf physics:localRot1 = (1, 0, 0, 0)
+                    }
+                }
+
+                def PhysicsRevoluteJoint "tu1_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu1_l>
+                    point3f physics:localPos0 = (0.33, -0.354, 0.215)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+
+            over "tu2_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.13702153, -0.019547239, -0.10538664)
+                float3 physics:diagonalInertia = (0.02630902, 0.063927986, 0.03857895)
+                float physics:mass = 7.725323
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "W2_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.000015702639, 0.025264977, -0.0000072287553)
+                    float physics:mass = 0
+
+                    def PhysicsRevoluteJoint "W2_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    )
+                    {
+                        uniform token physics:axis = "Y"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/tu2_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu2_l/W2_l>
+                        point3f physics:localPos0 = (-0.26738, -0.229, -0.21986)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (1, 0, 0, 0)
+                        quatf physics:localRot1 = (1, 0, 0, 0)
+                    }
+                }
+
+                def PhysicsRevoluteJoint "tu2_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu2_l>
+                    point3f physics:localPos0 = (-0.04, -0.354, 0.215)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+
+            over "tu3_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.1473623, 0.033315986, -0.12116879)
+                float3 physics:diagonalInertia = (0.035872538, 0.08546414, 0.050642207)
+                float physics:mass = 10.213298
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "W3_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.000012823652, -0.025264977, 0.000011589152)
+                    float physics:mass = 0
+
+                    def PhysicsRevoluteJoint "W3_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    )
+                    {
+                        uniform token physics:axis = "Y"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/tu3_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu3_l/W3_l>
+                        point3f physics:localPos0 = (-0.26738, 0.229, -0.21986)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (1, 0, 0, 0)
+                        quatf physics:localRot1 = (1, 0, 0, 0)
+                    }
+                }
+
+                def PhysicsRevoluteJoint "tu3_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu3_l>
+                    point3f physics:localPos0 = (-0.04, 0.354, 0.215)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+
+            over "tu4_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.13702153, 0.019547239, -0.10538664)
+                float3 physics:diagonalInertia = (0.02630902, 0.063927986, 0.03857895)
+                float physics:mass = 7.725323
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "W4_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.000006349081, -0.025264977, 0.000016072325)
+                    float physics:mass = 0
+
+                    def PhysicsRevoluteJoint "W4_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    )
+                    {
+                        uniform token physics:axis = "Y"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/tu4_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu4_l/W4_l>
+                        point3f physics:localPos0 = (0.26738, 0.229, -0.21986)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (1, 0, 0, 0)
+                        quatf physics:localRot1 = (1, 0, 0, 0)
+                    }
+                }
+
+                def PhysicsRevoluteJoint "tu4_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu4_l>
+                    point3f physics:localPos0 = (0.33, 0.354, 0.215)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+
+            over "su1_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.09534284, 5.551115e-17, -0.11345422)
+                float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                float physics:mass = 0.71580684
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "sm1_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.010741598, 0, -0.012782078)
+                    float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                    float physics:mass = 0.71580684
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "w1_l" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0.000017169636, 0.025264977, 0.0000020200505)
+                        float3 physics:diagonalInertia = (0.5135376, 0.89176303, 0.5135678)
+                        float physics:mass = 16.938526
+                        quatf physics:principalAxes = (1, 0, 0, 0)
+
+                        def PhysicsRevoluteJoint "w1_j" (
+                            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        )
+                        {
+                            uniform token physics:axis = "Y"
+                            custom rel physics:body0
+                            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su1_l/sm1_l>
+                            custom rel physics:body1
+                            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su1_l/sm1_l/w1_l>
+                            point3f physics:localPos0 = (-0.12302, -0.179, -0.19919)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                        }
+                    }
+
+                    def PhysicsPrismaticJoint "sm1_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                    )
+                    {
+                        uniform token physics:axis = "X"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su1_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su1_l/sm1_l>
+                        point3f physics:localPos0 = (-0.084601, 0, -0.10067)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (0.9064648, 0, -0.42228132, 0)
+                        quatf physics:localRot1 = (0.9064648, 0, -0.42228132, 0)
+                        float physics:lowerLimit = -0.05
+                        float physics:upperLimit = 0.05
+                    }
+                }
+
+                def PhysicsRevoluteJoint "su1_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su1_l>
+                    point3f physics:localPos0 = (0.805, -0.404, 0.295)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+
+            over "su2_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.09534284, -7.2164497e-16, -0.11345422)
+                float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                float physics:mass = 0.71580684
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "sm2_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.010741598, 2.0539126e-15, -0.012782078)
+                    float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                    float physics:mass = 0.71580684
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "w2_l" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0.000015702639, 0.025264977, -0.0000072287553)
+                        float3 physics:diagonalInertia = (0.51353973, 0.891763, 0.5135656)
+                        float physics:mass = 16.938526
+                        quatf physics:principalAxes = (1, 0, 0, 0)
+
+                        def PhysicsRevoluteJoint "w2_j" (
+                            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        )
+                        {
+                            uniform token physics:axis = "Y"
+                            custom rel physics:body0
+                            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su2_l/sm2_l>
+                            custom rel physics:body1
+                            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su2_l/sm2_l/w2_l>
+                            point3f physics:localPos0 = (0.12302, -0.178, -0.19919)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                        }
+                    }
+
+                    def PhysicsPrismaticJoint "sm2_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                    )
+                    {
+                        uniform token physics:axis = "X"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su2_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su2_l/sm2_l>
+                        point3f physics:localPos0 = (0.084601, 0, -0.10067)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (0.42228132, 0, -0.9064648, 0)
+                        quatf physics:localRot1 = (0.42228132, 0, -0.9064648, 0)
+                        float physics:lowerLimit = -0.05
+                        float physics:upperLimit = 0.05
+                    }
+                }
+
+                def PhysicsRevoluteJoint "su2_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su2_l>
+                    point3f physics:localPos0 = (-0.515, -0.405, 0.295)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+
+            over "su3_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.09534284, -9.880985e-15, -0.11345422)
+                float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                float physics:mass = 0.71580684
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "sm3_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.010741598, 9.436896e-16, -0.012782078)
+                    float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                    float physics:mass = 0.71580684
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "w3_l" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0.000012823652, -0.025264977, 0.000011589152)
+                        float3 physics:diagonalInertia = (0.51354796, 0.891763, 0.5135574)
+                        float physics:mass = 16.938526
+                        quatf physics:principalAxes = (1, 0, 0, 0)
+
+                        def PhysicsRevoluteJoint "w3_j" (
+                            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        )
+                        {
+                            uniform token physics:axis = "Y"
+                            custom rel physics:body0
+                            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su3_l/sm3_l>
+                            custom rel physics:body1
+                            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su3_l/sm3_l/w3_l>
+                            point3f physics:localPos0 = (0.12302, 0.178, -0.19919)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                        }
+                    }
+
+                    def PhysicsPrismaticJoint "sm3_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                    )
+                    {
+                        uniform token physics:axis = "X"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su3_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su3_l/sm3_l>
+                        point3f physics:localPos0 = (0.084601, 0, -0.10067)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (0.42228132, 0, -0.9064648, 0)
+                        quatf physics:localRot1 = (0.42228132, 0, -0.9064648, 0)
+                        float physics:lowerLimit = -0.05
+                        float physics:upperLimit = 0.05
+                    }
+                }
+
+                def PhysicsRevoluteJoint "su3_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su3_l>
+                    point3f physics:localPos0 = (-0.515, 0.405, 0.295)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+
+            over "su4_l" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.09534284, 2.2759572e-15, -0.11345422)
+                float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                float physics:mass = 0.71580684
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "sm4_l" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.010741598, -2.7200464e-15, -0.012782078)
+                    float3 physics:diagonalInertia = (0.0026376573, 0.0042719427, 0.0019583025)
+                    float physics:mass = 0.71580684
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "w4_l" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0.000006349081, -0.025264977, 0.000016072325)
+                        float3 physics:diagonalInertia = (0.51356244, 0.89176303, 0.5135429)
+                        float physics:mass = 16.938526
+                        quatf physics:principalAxes = (1, 0, 0, 0)
+
+                        def PhysicsRevoluteJoint "w4_j" (
+                            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        )
+                        {
+                            uniform token physics:axis = "Y"
+                            custom rel physics:body0
+                            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su4_l/sm4_l>
+                            custom rel physics:body1
+                            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su4_l/sm4_l/w4_l>
+                            point3f physics:localPos0 = (-0.12302, 0.179, -0.19919)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                        }
+                    }
+
+                    def PhysicsPrismaticJoint "sm4_j" (
+                        prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                    )
+                    {
+                        uniform token physics:axis = "X"
+                        custom rel physics:body0
+                        prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su4_l>
+                        custom rel physics:body1
+                        prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su4_l/sm4_l>
+                        point3f physics:localPos0 = (-0.084601, 0, -0.10067)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (0.9064648, 0, -0.42228132, 0)
+                        quatf physics:localRot1 = (0.9064648, 0, -0.42228132, 0)
+                        float physics:lowerLimit = -0.05
+                        float physics:upperLimit = 0.05
+                    }
+                }
+
+                def PhysicsRevoluteJoint "su4_j" (
+                    prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                )
+                {
+                    uniform token physics:axis = "Y"
+                    custom rel physics:body0
+                    prepend rel physics:body0 = </outdoor_description/Geometry/base_link>
+                    custom rel physics:body1
+                    prepend rel physics:body1 = </outdoor_description/Geometry/base_link/su4_l>
+                    point3f physics:localPos0 = (0.805, 0.404, 0.295)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "PhysicsMaterial" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "NewtonMaterialAPI"]
+        )
+        {
+            float newton:rollingFriction = 0.0001
+            float newton:torsionalFriction = 0.005
+            float physics:dynamicFriction = 1
+        }
+
+        def PhysicsFixedJoint "lock_w1_W1"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su1_l/sm1_l/w1_l>
+            custom rel physics:body1
+            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu1_l/W1_l>
+            uniform bool physics:excludeFromArticulation = 1
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "lock_w2_W2"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su2_l/sm2_l/w2_l>
+            custom rel physics:body1
+            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu2_l/W2_l>
+            uniform bool physics:excludeFromArticulation = 1
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "lock_w3_W3"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su3_l/sm3_l/w3_l>
+            custom rel physics:body1
+            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu3_l/W3_l>
+            uniform bool physics:excludeFromArticulation = 1
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "lock_w4_W4"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </outdoor_description/Geometry/base_link/su4_l/sm4_l/w4_l>
+            custom rel physics:body1
+            prepend rel physics:body1 = </outdoor_description/Geometry/base_link/tu4_l/W4_l>
+            uniform bool physics:excludeFromArticulation = 1
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+    }
+}
+
+def PhysicsScene "PhysicsScene" (
+    prepend apiSchemas = ["NewtonSceneAPI"]
+)
+{
+    uniform int newton:maxSolverIterations = 100
+    uniform int newton:timeStepsPerSecond = 500
+    vector3f physics:gravityDirection = (0, 0, -1)
+    float physics:gravityMagnitude = 9.81
+}
+

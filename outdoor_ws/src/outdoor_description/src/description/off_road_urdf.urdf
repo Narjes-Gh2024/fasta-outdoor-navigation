@@ -1121,4 +1121,20 @@
     <axis
       xyz="0 1 0" />
   </joint>
+  <loop_joint name="lock_w1_W1" type="fixed">
+    <link1 link="w1_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W1_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
+  <loop_joint name="lock_w2_W2" type="fixed">
+    <link1 link="w2_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W2_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
+  <loop_joint name="lock_w3_W3" type="fixed">
+    <link1 link="w3_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W3_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
+  <loop_joint name="lock_w4_W4" type="fixed">
+    <link1 link="w4_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W4_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
 </robot>

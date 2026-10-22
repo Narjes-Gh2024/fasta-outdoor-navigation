@@ -1,0 +1,993 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (5, 0, 0)
+                double radius = 5
+            }
+            dictionary Perspective = {
+                double3 position = (3.3151317442308565, 2.497563255504522, 2.3365337173774594)
+                double3 target = (-1.4314905029463674, -1.595607264959349, -0.8494462658818214)
+            }
+            dictionary Right = {
+                double3 position = (0, -5, 0)
+                double radius = 5
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 5)
+                double radius = 5
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        string creator = "MuJoCo USD Converter v0.2.0"
+        dictionary metricsAssembler = {
+            dictionary "/outdoor_description/GummyBear" = {
+            }
+            int version = 1
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./offroad.usda"
+        }
+        dictionary physicsSettings = {
+            int "/persistent/simulation/minFrameRate" = 197
+        }
+        dictionary renderSettings = {
+        }
+    }
+    defaultPrim = "outdoor_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp7itnoy7t/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/usdex_offroad/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/temp_offroad/offroad.usd
+
+
+Generated from Composed Stage of root layer /home/roboticlab1/fasta-outdoor-navigation/outdoor_ws/src/outdoor_description/src/description/offroad/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "outdoor_description" (
+    prepend references = @./payloads/base.usda@
+    variants = {
+        string Physics = "physx"
+    }
+    append variantSets = "Physics"
+)
+{
+    over "Geometry"
+    {
+        over "floor" (
+            active = true
+        )
+        {
+        }
+
+        over "base_link"
+        {
+            string isaac:nameOverride (
+                displayName = "Name Override"
+            )
+
+            over "tu1_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "W1_l"
+                {
+                    over "W1_j"
+                    {
+                        float state:angular:physics:position = 0
+                        float state:angular:physics:velocity = 0
+                    }
+                }
+
+                over "tu1_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            over "tu2_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "W2_l"
+                {
+                    over "W2_j"
+                    {
+                        float state:angular:physics:position = 0
+                        float state:angular:physics:velocity = 0
+                    }
+                }
+
+                over "tu2_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            over "tu3_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "W3_l"
+                {
+                    over "W3_j"
+                    {
+                        float state:angular:physics:position = 0
+                        float state:angular:physics:velocity = 0
+                    }
+                }
+
+                over "tu3_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            over "tu4_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "W4_l"
+                {
+                    over "W4_j"
+                    {
+                        bool[] isaac:actuator (
+                            displayName = "Actuator"
+                        )
+                        string isaac:NameOverride (
+                            displayName = "Joint Name Override"
+                        )
+                        token[] isaac:physics:DofOffsetOpOrder (
+                            displayName = "Dof Offset Op Order"
+                        )
+                        float state:angular:physics:position = 0
+                        float state:angular:physics:velocity = 0
+                    }
+                }
+
+                over "tu4_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            over "su1_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "sm1_l"
+                {
+                    over "w1_l"
+                    {
+                        string isaac:nameOverride (
+                            displayName = "Name Override"
+                        )
+
+                        over "w1_j"
+                        {
+                            float drive:angular:physics:damping = 1000
+                            float drive:angular:physics:targetVelocity = 20
+                            bool[] isaac:actuator (
+                                displayName = "Actuator"
+                            )
+                            string isaac:NameOverride (
+                                displayName = "Joint Name Override"
+                            )
+                            token[] isaac:physics:DofOffsetOpOrder (
+                                displayName = "Dof Offset Op Order"
+                            )
+                            float state:angular:physics:position = 0
+                            float state:angular:physics:velocity = 0
+                        }
+                    }
+
+                    over "sm1_j"
+                    {
+                        bool[] isaac:actuator (
+                            displayName = "Actuator"
+                        )
+                        string isaac:NameOverride (
+                            displayName = "Joint Name Override"
+                        )
+                        token[] isaac:physics:DofOffsetOpOrder (
+                            displayName = "Dof Offset Op Order"
+                        )
+                        float state:linear:physics:position = 0
+                        float state:linear:physics:velocity = 0
+                    }
+                }
+
+                over "su1_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            over "su2_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "sm2_l"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+
+                    over "w2_l"
+                    {
+                        over "w2_j"
+                        {
+                            float drive:angular:physics:damping = 1000
+                            float drive:angular:physics:targetVelocity = 20
+                            bool[] isaac:actuator (
+                                displayName = "Actuator"
+                            )
+                            string isaac:NameOverride (
+                                displayName = "Joint Name Override"
+                            )
+                            token[] isaac:physics:DofOffsetOpOrder (
+                                displayName = "Dof Offset Op Order"
+                            )
+                            float state:angular:physics:position = 0
+                            float state:angular:physics:velocity = 0
+                        }
+                    }
+
+                    over "sm2_j"
+                    {
+                        float state:linear:physics:position = 0
+                        float state:linear:physics:velocity = 0
+                    }
+                }
+
+                over "su2_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            over "su3_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "sm3_l"
+                {
+                    over "w3_l"
+                    {
+                        over "w3_j"
+                        {
+                            float drive:angular:physics:damping = 1000
+                            float drive:angular:physics:targetVelocity = 20
+                            bool[] isaac:actuator (
+                                displayName = "Actuator"
+                            )
+                            string isaac:NameOverride (
+                                displayName = "Joint Name Override"
+                            )
+                            token[] isaac:physics:DofOffsetOpOrder (
+                                displayName = "Dof Offset Op Order"
+                            )
+                            float state:angular:physics:position = 0
+                            float state:angular:physics:velocity = 0
+                        }
+                    }
+
+                    over "sm3_j"
+                    {
+                        float state:linear:physics:position = 0
+                        float state:linear:physics:velocity = 0
+                    }
+                }
+
+                over "su3_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            over "su4_l"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "sm4_l"
+                {
+                    over "w4_l"
+                    {
+                        over "w4_j"
+                        {
+                            float drive:angular:physics:damping = 1000
+                            float drive:angular:physics:targetVelocity = 20
+                            bool[] isaac:actuator (
+                                displayName = "Actuator"
+                            )
+                            string isaac:NameOverride (
+                                displayName = "Joint Name Override"
+                            )
+                            token[] isaac:physics:DofOffsetOpOrder (
+                                displayName = "Dof Offset Op Order"
+                            )
+                            float state:angular:physics:position = 0
+                            float state:angular:physics:velocity = 0
+                        }
+                    }
+
+                    over "sm4_j"
+                    {
+                        float state:linear:physics:position = 0
+                        float state:linear:physics:velocity = 0
+                    }
+                }
+
+                over "su4_j"
+                {
+                    bool[] isaac:actuator (
+                        displayName = "Actuator"
+                    )
+                    string isaac:NameOverride (
+                        displayName = "Joint Name Override"
+                    )
+                    token[] isaac:physics:DofOffsetOpOrder (
+                        displayName = "Dof Offset Op Order"
+                    )
+                    float state:angular:physics:position = 0
+                    float state:angular:physics:velocity = 0
+                }
+            }
+
+            def IsaacImuSensor "Imu_Sensor"
+            {
+                int angularVelocityFilterWidth = 1
+                bool enabled = 1
+                int linearAccelerationFilterWidth = 1
+                int orientationFilterWidth = 1
+                token visibility = "invisible"
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0.3)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+    variantSet "Physics" = {
+        "mujoco" (
+            prepend payload = @./payloads/Physics/mujoco.usda@
+        ) {
+
+        }
+        "none" {
+
+        }
+        "physics" (
+            prepend payload = @./payloads/Physics/physics.usda@
+        ) {
+
+        }
+        "physx" (
+            prepend payload = @./payloads/Physics/physx.usda@
+        ) {
+
+        }
+    }
+}
+
+def "Render" (
+    hide_in_stage_window = true
+    no_delete = true
+)
+{
+    def "OmniverseKit"
+    {
+        def "HydraTextures" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            def RenderProduct "omni_kit_widget_viewport_ViewportTexture_0" (
+                prepend apiSchemas = ["OmniRtxSettingsCommonAdvancedAPI_1", "OmniRtxSettingsRtAdvancedAPI_1", "OmniRtxSettingsPtAdvancedAPI_1", "OmniRtxPostColorGradingAPI_1", "OmniRtxPostChromaticAberrationAPI_1", "OmniRtxPostBloomPhysicalAPI_1", "OmniRtxPostMatteObjectAPI_1", "OmniRtxPostCompositingAPI_1", "OmniRtxPostDofAPI_1", "OmniRtxPostMotionBlurAPI_1", "OmniRtxPostTvNoiseAPI_1", "OmniRtxPostTonemapIrayReinhardAPI_1", "OmniRtxPostDebugSettingsAPI_1", "OmniRtxDebugSettingsAPI_1"]
+                hide_in_stage_window = true
+                no_delete = true
+            )
+            {
+                rel camera = </OmniverseKit_Persp>
+                token omni:rtx:ambientOcclusion:denoiserMode = "none"
+                token omni:rtx:background:source:texture:textureMode = "repeatMirrored"
+                token omni:rtx:background:source:type = "domeLight"
+                bool omni:rtx:debug:view:pixelDebug:enableFixedTextPos = 1
+                token omni:rtx:directLighting:sampledLighting:denoisingTechnique = "None"
+                bool omni:rtx:dlss:frameGeneration = 0
+                float3 omni:rtx:domeLight:rotationAxis = (0, 0, 1)
+                bool omni:rtx:indirectDiffuse:denoiser:enabled = 0
+                bool omni:rtx:material:db:syncLoads = 1
+                token omni:rtx:post:dlss:execMode = "performance"
+                bool omni:rtx:post:registeredCompositing:invertColorCorrection = 1
+                bool omni:rtx:post:registeredCompositing:invertToneMap = 1
+                bool omni:rtx:pt:adaptiveSampling:filterError = 0
+                uint omni:rtx:pt:adaptiveSampling:fixedSppIterations = 2
+                uint omni:rtx:pt:maxSamplesPerLaunch = 2073600
+                uint omni:rtx:pt:mgpu:maxPixelsPerRegionExponent = 12
+                bool omni:rtx:reflections:denoiser:enabled = 0
+                token omni:rtx:rendermode = "RealTimePathTracing"
+                color3f omni:rtx:rt:ambientLight:color = (0.1, 0.1, 0.1)
+                bool omni:rtx:rt:demoire = 0
+                bool omni:rtx:rt:ecoMode:enabled
+                bool omni:rtx:rt:lightcache:spatialCache:dontResolveConflicts = 1
+                int omni:rtx:rt:sss:samples = 1
+                uint omni:rtx:rtpt:maxVolumeBounces = 15
+                float omni:rtx:rtpt:modulatingRoughnessThreshold = 0.08
+                bool omni:rtx:scene:hydra:materialSyncLoads = 1
+                bool omni:rtx:scene:hydra:mdlMaterialWarmup = 1
+                rel orderedVars = </Render/Vars/LdrColor>
+                custom bool overrideClipRange = 0
+                uniform int2 resolution = (1280, 720)
+            }
+        }
+    }
+
+    def RenderSettings "OmniverseGlobalRenderSettings" (
+        prepend apiSchemas = ["OmniRtxSettingsGlobalRtAdvancedAPI_1", "OmniRtxSettingsGlobalPtAdvancedAPI_1"]
+        no_delete = true
+    )
+    {
+        rel products = </Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0>
+    }
+
+    def "Vars"
+    {
+        def RenderVar "LdrColor" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            uniform string sourceName = "LdrColor"
+            uniform token sourceType = "raw"
+        }
+    }
+}
+
+over "OmniverseKit_Persp" (
+    prepend apiSchemas = ["OmniRtxCameraAutoExposureAPI_1", "OmniRtxCameraExposureAPI_1"]
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (0.01, 10000000)
+    float exposure:fStop = 5
+    float exposure:responsivity = 1.1026709
+    float exposure:time = 0.02
+    float focalLength = 18.147562
+    float focusDistance = 400
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -7.0309982307437)
+    float3 xformOp:rotateXYZ = (63.055103, 2.862499e-14, 130.7723)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (3.3151317442308565, 2.497563255504522, 2.3365337173774594)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+def PhysicsScene "PhysicsScene" (
+    prepend apiSchemas = ["NewtonSceneAPI", "PhysxSceneAPI"]
+)
+{
+    uint physxScene:timeStepsPerSecond = 200
+}
+
+def "FlatGrid" (
+    prepend references = @https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0/Isaac/Environments/Grid/default_environment.usd@
+)
+{
+}
+
+over "OmniverseKit_Front" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (90, -1.2722219e-14, 90)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (5, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+over "OmniverseKit_Right" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (90, -1.41245e-30, 1.2722219e-14)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, -5, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+over "OmniverseKit_Top" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (-1.2722219e-14, -7.016709e-15, -90)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 5)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+def "Graph"
+{
+    def OmniGraph "ROS_JointStates"
+    {
+        token evaluationMode = "Automatic"
+        token evaluator:type = "execution"
+        token fabricCacheBacking = "StageWithoutHistory"
+        int2 fileFormatVersion = (1, 9)
+        token pipelineStage = "pipelineStageOnDemand"
+
+        def OmniGraphNode "Context"
+        {
+            custom uchar inputs:domain_id
+            custom bool inputs:useDomainIDEnvVar
+            token node:type = "isaacsim.ros2.bridge.ROS2Context"
+            int node:typeVersion = 2
+            custom uint64 outputs:context
+        }
+
+        def OmniGraphNode "ReadSimTime"
+        {
+            custom uint64 inputs:referenceTimeDenominator
+            custom int64 inputs:referenceTimeNumerator
+            custom bool inputs:resetOnStop = 1
+            token node:type = "isaacsim.core.nodes.IsaacReadSimulationTime"
+            int node:typeVersion = 1
+            custom double outputs:simulationTime
+        }
+
+        def OmniGraphNode "PublisherJointState"
+        {
+            custom uint64 inputs:context
+            prepend uint64 inputs:context.connect = </Graph/ROS_JointStates/Context.outputs:context>
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = [
+                </Graph/ROS_JointStates/OnPlaybackTick.outputs:tick>,
+                </Graph/ROS_JointStates/on_physics_step.outputs:step>,
+            ]
+            custom uchar[] inputs:jointDofTypes
+            custom double[] inputs:jointEfforts
+            custom token[] inputs:jointNames
+            custom double[] inputs:jointPositions
+            custom double[] inputs:jointVelocities
+            custom string inputs:nodeNamespace = "offroad"
+            custom string inputs:qosProfile
+            custom uint64 inputs:queueSize
+            custom float inputs:sensorTime
+            custom float inputs:stageMetersPerUnit
+            custom rel inputs:targetPrim = </outdoor_description/Geometry/base_link> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom double inputs:timeStamp
+            prepend double inputs:timeStamp.connect = </Graph/ROS_JointStates/ReadSimTime.outputs:simulationTime>
+            custom string inputs:topicName = "/joint_states"
+            token node:type = "isaacsim.ros2.bridge.ROS2PublishJointState"
+            int node:typeVersion = 1
+        }
+
+        def OmniGraphNode "SubscriberJointState"
+        {
+            custom uint64 inputs:context
+            prepend uint64 inputs:context.connect = </Graph/ROS_JointStates/Context.outputs:context>
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = [
+                </Graph/ROS_JointStates/OnPlaybackTick.outputs:tick>,
+                </Graph/ROS_JointStates/on_physics_step.outputs:step>,
+            ]
+            custom string inputs:nodeNamespace = "offroad"
+            custom string inputs:qosProfile
+            custom uint64 inputs:queueSize
+            custom string inputs:topicName = "/joint_command"
+            token node:type = "isaacsim.ros2.bridge.ROS2SubscribeJointState"
+            int node:typeVersion = 2
+            custom double[] outputs:effortCommand
+            custom uint outputs:execOut (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom token[] outputs:jointNames
+            custom double[] outputs:positionCommand
+            custom double outputs:timeStamp
+            custom double[] outputs:velocityCommand
+        }
+
+        def OmniGraphNode "ArticulationController"
+        {
+            custom double[] inputs:effortCommand
+            prepend double[] inputs:effortCommand.connect = </Graph/ROS_JointStates/SubscriberJointState.outputs:effortCommand>
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = [
+                </Graph/ROS_JointStates/OnPlaybackTick.outputs:tick>,
+                </Graph/ROS_JointStates/on_physics_step.outputs:step>,
+            ]
+            custom int[] inputs:jointIndices
+            custom token[] inputs:jointNames
+            prepend token[] inputs:jointNames.connect = </Graph/ROS_JointStates/SubscriberJointState.outputs:jointNames>
+            custom double[] inputs:positionCommand
+            prepend double[] inputs:positionCommand.connect = </Graph/ROS_JointStates/SubscriberJointState.outputs:positionCommand>
+            custom string inputs:robotPath
+            custom rel inputs:targetPrim = </outdoor_description/Geometry/base_link> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom double[] inputs:velocityCommand
+            prepend double[] inputs:velocityCommand.connect = </Graph/ROS_JointStates/SubscriberJointState.outputs:velocityCommand>
+            token node:type = "isaacsim.core.nodes.IsaacArticulationController"
+            int node:typeVersion = 1
+        }
+
+        def OmniGraphNode "on_physics_step" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            token node:type = "isaacsim.core.nodes.OnPhysicsStep"
+            int node:typeVersion = 1
+            custom double outputs:deltaSimulationTime
+            custom double outputs:deltaSystemTime
+            custom uint outputs:step (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (-968.0607, 147.0013)
+        }
+    }
+
+    def OmniGraph "ROS_IMU"
+    {
+        token evaluationMode = "Automatic"
+        token evaluator:type = "execution"
+        token fabricCacheBacking = "StageWithoutHistory"
+        int2 fileFormatVersion = (1, 9)
+        token pipelineStage = "pipelineStageOnDemand"
+
+        def OmniGraphNode "on_physics_step" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            token node:type = "isaacsim.core.nodes.OnPhysicsStep"
+            int node:typeVersion = 1
+            custom double outputs:deltaSimulationTime
+            custom double outputs:deltaSystemTime
+            custom uint outputs:step (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (-1016.8025, 171.93057)
+        }
+
+        def OmniGraphNode "ros2_context" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uchar inputs:domain_id
+            custom bool inputs:useDomainIDEnvVar
+            token node:type = "isaacsim.ros2.bridge.ROS2Context"
+            int node:typeVersion = 2
+            custom uint64 outputs:context
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (-678.9941, -141.4078)
+        }
+
+        def OmniGraphNode "isaac_read_imu_node" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </Graph/ROS_IMU/on_physics_step.outputs:step>
+            custom rel inputs:imuPrim = </outdoor_description/Geometry/base_link/Imu_Sensor> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom bool inputs:readGravity
+            custom bool inputs:useLatestData
+            token node:type = "isaacsim.sensors.physics.IsaacReadIMU"
+            int node:typeVersion = 1
+            custom vector3d outputs:angVel
+            custom uint outputs:execOut (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom vector3d outputs:linAcc
+            custom quatd outputs:orientation
+            custom float outputs:sensorTime
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (-686.4662, 11.681439)
+        }
+
+        def OmniGraphNode "ros2_publish_imu" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom vector3d inputs:angularVelocity
+            prepend vector3d inputs:angularVelocity.connect = </Graph/ROS_IMU/isaac_read_imu_node.outputs:angVel>
+            custom uint64 inputs:context
+            prepend uint64 inputs:context.connect = </Graph/ROS_IMU/ros2_context.outputs:context>
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </Graph/ROS_IMU/isaac_read_imu_node.outputs:execOut>
+            custom string inputs:frameId = "imu"
+            custom vector3d inputs:linearAcceleration
+            prepend vector3d inputs:linearAcceleration.connect = </Graph/ROS_IMU/isaac_read_imu_node.outputs:linAcc>
+            custom string inputs:nodeNamespace = "offroad"
+            custom quatd inputs:orientation
+            prepend quatd inputs:orientation.connect = </Graph/ROS_IMU/isaac_read_imu_node.outputs:orientation>
+            custom bool inputs:publishAngularVelocity
+            custom bool inputs:publishLinearAcceleration
+            custom bool inputs:publishOrientation
+            custom string inputs:qosProfile
+            custom uint64 inputs:queueSize
+            custom double inputs:timeStamp
+            prepend double inputs:timeStamp.connect = </Graph/ROS_IMU/isaac_read_simulation_time.outputs:simulationTime>
+            custom string inputs:topicName
+            token node:type = "isaacsim.ros2.bridge.ROS2PublishImu"
+            int node:typeVersion = 1
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (-234.45636, -29.092821)
+        }
+
+        def OmniGraphNode "isaac_read_simulation_time" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uint64 inputs:referenceTimeDenominator
+            custom int64 inputs:referenceTimeNumerator
+            custom bool inputs:resetOnStop
+            token node:type = "isaacsim.core.nodes.IsaacReadSimulationTime"
+            int node:typeVersion = 1
+            custom double outputs:simulationTime
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (-693.3566, 279.9129)
+        }
+    }
+
+    def OmniGraph "ROS_Clock"
+    {
+        token evaluationMode = "Automatic"
+        token evaluator:type = "execution"
+        token fabricCacheBacking = "StageWithoutHistory"
+        int2 fileFormatVersion = (1, 9)
+        token pipelineStage = "pipelineStageSimulation"
+
+        def OmniGraphNode "OnPlaybackTick"
+        {
+            token node:type = "omni.graph.action.OnPlaybackTick"
+            int node:typeVersion = 2
+            custom double outputs:deltaSeconds
+            custom double outputs:frame
+            custom uint outputs:tick (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom double outputs:time
+        }
+
+        def OmniGraphNode "ReadSimTime"
+        {
+            custom uint64 inputs:referenceTimeDenominator
+            custom int64 inputs:referenceTimeNumerator
+            custom bool inputs:resetOnStop = 1
+            token node:type = "isaacsim.core.nodes.IsaacReadSimulationTime"
+            int node:typeVersion = 1
+            custom double outputs:simulationTime
+        }
+
+        def OmniGraphNode "PublishClock"
+        {
+            custom uint64 inputs:context
+            prepend uint64 inputs:context.connect = </Graph/ROS_Clock/Context.outputs:context>
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </Graph/ROS_Clock/OnPlaybackTick.outputs:tick>
+            custom string inputs:nodeNamespace
+            custom string inputs:qosProfile
+            custom uint64 inputs:queueSize
+            custom double inputs:timeStamp
+            prepend double inputs:timeStamp.connect = </Graph/ROS_Clock/ReadSimTime.outputs:simulationTime>
+            custom string inputs:topicName
+            token node:type = "isaacsim.ros2.bridge.ROS2PublishClock"
+            int node:typeVersion = 1
+        }
+
+        def OmniGraphNode "Context"
+        {
+            custom uchar inputs:domain_id
+            custom bool inputs:useDomainIDEnvVar
+            token node:type = "isaacsim.ros2.bridge.ROS2Context"
+            int node:typeVersion = 2
+            custom uint64 outputs:context
+        }
+    }
+}
+

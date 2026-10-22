@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="outdoor_description">
+  <link name="world"/>
+  <link name="base_link">
+    <visual name="W1_l_visual">
+      <origin xyz="0.59724832 -0.58311796 0.31748495" rpy="0.00043791 -0.00057729 0.00002106"/>
+      <geometry>
+        <mesh filename="./meshes/W1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu1_l_visual">
+      <origin xyz="0.30197531 -0.35420349 0.49827045" rpy="0.00044216 -0.13902727 -0.00003995"/>
+      <geometry>
+        <mesh filename="./meshes/tu1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="W2_l_visual">
+      <origin xyz="-0.36368212 -0.58313924 0.31990698" rpy="0.0004448 -0.17660777 -0.00005683"/>
+      <geometry>
+        <mesh filename="./meshes/W2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu2_l_visual">
+      <origin xyz="-0.06802028 -0.35421193 0.5000394" rpy="0.00044233 0.14123706 0.0000836"/>
+      <geometry>
+        <mesh filename="./meshes/tu2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="W3_l_visual">
+      <origin xyz="-0.36501303 0.58285922 0.32258004" rpy="0.00044504 -0.17959586 -0.00005819"/>
+      <geometry>
+        <mesh filename="./meshes/W3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu3_l_visual">
+      <origin xyz="-0.06803542 0.35378772 0.5003494" rpy="0.0004428 0.14853568 0.00008685"/>
+      <geometry>
+        <mesh filename="./meshes/tu3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="W4_l_visual">
+      <origin xyz="0.5972352 0.58288169 0.31801468" rpy="0.00043793 0.0082745 0.00002494"/>
+      <geometry>
+        <mesh filename="./meshes/W4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu4_l_visual">
+      <origin xyz="0.30196029 0.3537963 0.49858052" rpy="0.00044216 -0.13909198 -0.00003998"/>
+      <geometry>
+        <mesh filename="./meshes/tu4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="w1_l_visual">
+      <origin xyz="0.59725881 -0.58311802 0.3174803" rpy="0.00043791 -0.00044802 0.00002111"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm1_l_visual">
+      <origin xyz="0.72380871 -0.40420163 0.51452237" rpy="0.00043798 0.01784794 0.00002914"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su1_l_visual">
+      <origin xyz="0.77735341 -0.40422741 0.57597673" rpy="0.00043798 0.01784794 0.00002914"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="w2_l_visual">
+      <origin xyz="-0.36367893 -0.58313936 0.31990731" rpy="0.0004448 -0.17662014 -0.00005684"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm2_l_visual">
+      <origin xyz="-0.48809513 -0.40522891 0.5183084" rpy="0.00043792 -0.00701548 0.00001826"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su2_l_visual">
+      <origin xyz="-0.54263115 -0.40525812 0.58228701" rpy="0.00043792 -0.00701548 0.00001826"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="w3_l_visual">
+      <origin xyz="-0.36501819 0.5828591 0.3225798" rpy="0.00044504 -0.17959903 -0.00005819"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm2_l_visual">
+      <origin xyz="-0.48968127 0.40476981 0.52066505" rpy="0.00043792 -0.00828311 0.0000177"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su2_l_visual">
+      <origin xyz="-0.54264838 0.40474153 0.58264172" rpy="0.00043792 -0.00828311 0.0000177"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="w4_l_visual">
+      <origin xyz="0.59723091 0.58288169 0.31800821" rpy="0.00043792 0.00829112 0.00002494"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm1_l_visual">
+      <origin xyz="0.72379702 0.40379822 0.51488799" rpy="0.00043798 0.01788433 0.00002915"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su1_l_visual">
+      <origin xyz="0.77733624 0.40377244 0.5763306" rpy="0.00043798 0.01788433 0.00002915"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="base_link_visual">
+      <origin xyz="-0.02905625 -0.00011713 0.28500569" rpy="0.00043638 0.00476417 0.00002326"/>
+      <geometry>
+        <mesh filename="./meshes/base_link_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W1_l_visual">
+      <origin xyz="0.59724832 -0.58311796 0.31748495" rpy="0.00043791 -0.00057729 0.00002106"/>
+      <geometry>
+        <mesh filename="./meshes/W1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu1_l_visual">
+      <origin xyz="0.30197531 -0.35420349 0.49827045" rpy="0.00044216 -0.13902727 -0.00003995"/>
+      <geometry>
+        <mesh filename="./meshes/tu1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="W2_l_visual">
+      <origin xyz="-0.36368212 -0.58313924 0.31990698" rpy="0.0004448 -0.17660777 -0.00005683"/>
+      <geometry>
+        <mesh filename="./meshes/W2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu2_l_visual">
+      <origin xyz="-0.06802028 -0.35421193 0.5000394" rpy="0.00044233 0.14123706 0.0000836"/>
+      <geometry>
+        <mesh filename="./meshes/tu2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="W3_l_visual">
+      <origin xyz="-0.36501303 0.58285922 0.32258004" rpy="0.00044504 -0.17959586 -0.00005819"/>
+      <geometry>
+        <mesh filename="./meshes/W3_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu3_l_visual">
+      <origin xyz="-0.06803542 0.35378772 0.5003494" rpy="0.0004428 0.14853568 0.00008685"/>
+      <geometry>
+        <mesh filename="./meshes/tu3_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="W4_l_visual">
+      <origin xyz="0.5972352 0.58288169 0.31801468" rpy="0.00043793 0.0082745 0.00002494"/>
+      <geometry>
+        <mesh filename="./meshes/W4_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu4_l_visual">
+      <origin xyz="0.30196029 0.3537963 0.49858052" rpy="0.00044216 -0.13909198 -0.00003998"/>
+      <geometry>
+        <mesh filename="./meshes/tu4_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="w1_l_visual">
+      <origin xyz="0.59725881 -0.58311802 0.3174803" rpy="0.00043791 -0.00044802 0.00002111"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm1_l_visual">
+      <origin xyz="0.72380871 -0.40420163 0.51452237" rpy="0.00043798 0.01784794 0.00002914"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su1_l_visual">
+      <origin xyz="0.77735341 -0.40422741 0.57597673" rpy="0.00043798 0.01784794 0.00002914"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="w2_l_visual">
+      <origin xyz="-0.36367893 -0.58313936 0.31990731" rpy="0.0004448 -0.17662014 -0.00005684"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm2_l_visual">
+      <origin xyz="-0.48809513 -0.40522891 0.5183084" rpy="0.00043792 -0.00701548 0.00001826"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su2_l_visual">
+      <origin xyz="-0.54263115 -0.40525812 0.58228701" rpy="0.00043792 -0.00701548 0.00001826"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="w3_l_visual">
+      <origin xyz="-0.36501819 0.5828591 0.3225798" rpy="0.00044504 -0.17959903 -0.00005819"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm2_l_visual">
+      <origin xyz="-0.48968127 0.40476981 0.52066505" rpy="0.00043792 -0.00828311 0.0000177"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su2_l_visual">
+      <origin xyz="-0.54264838 0.40474153 0.58264172" rpy="0.00043792 -0.00828311 0.0000177"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="w4_l_visual">
+      <origin xyz="0.59723091 0.58288169 0.31800821" rpy="0.00043792 0.00829112 0.00002494"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm1_l_visual">
+      <origin xyz="0.72379702 0.40379822 0.51488799" rpy="0.00043798 0.01788433 0.00002915"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su1_l_visual">
+      <origin xyz="0.77733624 0.40377244 0.5763306" rpy="0.00043798 0.01788433 0.00002915"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="base_link_visual">
+      <origin xyz="-0.02905625 -0.00011713 0.28500569" rpy="0.00043638 0.00476417 0.00002326"/>
+      <geometry>
+        <mesh filename="./meshes/base_link_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tu1_l">
+    <inertial>
+      <origin xyz="0.14736231 -0.03331599 -0.12116879" rpy="0 0 0"/>
+      <mass value="10.21329784"/>
+      <inertia ixx="0.03587254" ixy="0" ixz="0" iyy="0.08546414" iyz="0" izz="0.05064221"/>
+    </inertial>
+    <visual name="W1_l_visual">
+      <origin xyz="0.29612915 -0.22899987 -0.17928296" rpy="0.00000153 -0.00534145 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/W1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu1_l_visual">
+      <origin xyz="0.00000353 -0.00000028 -0.00000612" rpy="0.00000153 -0.14379145 -0.00000007"/>
+      <geometry>
+        <mesh filename="./meshes/tu1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W1_l_visual">
+      <origin xyz="0.29612915 -0.22899987 -0.17928296" rpy="0.00000153 -0.00534145 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/W1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu1_l_visual">
+      <origin xyz="0.00000353 -0.00000028 -0.00000612" rpy="0.00000153 -0.14379145 -0.00000007"/>
+      <geometry>
+        <mesh filename="./meshes/tu1_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tu2_l">
+    <inertial>
+      <origin xyz="-0.13702153 -0.01954724 -0.10538664" rpy="0 0 0"/>
+      <mass value="7.7253232"/>
+      <inertia ixx="0.02630902" ixy="0" ixz="0" iyy="0.06392799" iyz="0" izz="0.03857895"/>
+    </inertial>
+    <visual name="W2_l_visual">
+      <origin xyz="-0.29480191 -0.22899974 -0.18143897" rpy="0.00000153 -0.18137196 -0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/W2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu2_l_visual">
+      <origin xyz="0.00000372 -0.0000001 0.0000001" rpy="0.00000156 0.13647291 0.00000037"/>
+      <geometry>
+        <mesh filename="./meshes/tu2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W2_l_visual">
+      <origin xyz="-0.29480191 -0.22899974 -0.18143897" rpy="0.00000153 -0.18137196 -0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/W2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu2_l_visual">
+      <origin xyz="0.00000372 -0.0000001 0.0000001" rpy="0.00000156 0.13647291 0.00000037"/>
+      <geometry>
+        <mesh filename="./meshes/tu2_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tu3_l">
+    <inertial>
+      <origin xyz="-0.14736231 0.03331599 -0.12116879" rpy="0 0 0"/>
+      <mass value="10.21329784"/>
+      <inertia ixx="0.03587254" ixy="0" ixz="0" iyy="0.08546414" iyz="0" izz="0.05064221"/>
+    </inertial>
+    <visual name="W3_l_visual">
+      <origin xyz="-0.29611842 0.2289998 -0.17928097" rpy="0.00000153 -0.18436004 -0.00000015"/>
+      <geometry>
+        <mesh filename="./meshes/W3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu3_l_visual">
+      <origin xyz="0.00000357 -0.00000039 0.00000114" rpy="0.00000156 0.14377153 0.00000037"/>
+      <geometry>
+        <mesh filename="./meshes/tu3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W3_l_visual">
+      <origin xyz="-0.29611842 0.2289998 -0.17928097" rpy="0.00000153 -0.18436004 -0.00000015"/>
+      <geometry>
+        <mesh filename="./meshes/W3_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu3_l_visual">
+      <origin xyz="0.00000357 -0.00000039 0.00000114" rpy="0.00000156 0.14377153 0.00000037"/>
+      <geometry>
+        <mesh filename="./meshes/tu3_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tu4_l">
+    <inertial>
+      <origin xyz="0.13702153 0.01954724 -0.10538664" rpy="0 0 0"/>
+      <mass value="7.7253232"/>
+      <inertia ixx="0.02630902" ixy="0" ixz="0" iyy="0.06392799" iyz="0" izz="0.03857895"/>
+    </inertial>
+    <visual name="W4_l_visual">
+      <origin xyz="0.29614064 0.22899989 -0.17926198" rpy="0.00000153 0.00351033 0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/W4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="tu4_l_visual">
+      <origin xyz="0.0000035 -0.00000042 -0.00000501" rpy="0.00000153 -0.14385616 -0.00000007"/>
+      <geometry>
+        <mesh filename="./meshes/tu4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W4_l_visual">
+      <origin xyz="0.29614064 0.22899989 -0.17926198" rpy="0.00000153 0.00351033 0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/W4_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="tu4_l_visual">
+      <origin xyz="0.0000035 -0.00000042 -0.00000501" rpy="0.00000153 -0.14385616 -0.00000007"/>
+      <geometry>
+        <mesh filename="./meshes/tu4_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="su1_l">
+    <inertial>
+      <origin xyz="-0.09534284 0 -0.11345422" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w1_l_visual">
+      <origin xyz="-0.17886033 -0.17899992 -0.25928754" rpy="0.00000153 -0.00521218 0.00000012"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm1_l_visual">
+      <origin xyz="-0.05324645 -0.00000024 -0.06172287" rpy="0.00000153 0.01308377 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su1_l_visual">
+      <origin xyz="0.00000487 -0.00000034 -0.00001411" rpy="0.00000153 0.01308377 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w1_l_visual">
+      <origin xyz="-0.17886033 -0.17899992 -0.25928754" rpy="0.00000153 -0.00521218 0.00000012"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm1_l_visual">
+      <origin xyz="-0.05324645 -0.00000024 -0.06172287" rpy="0.00000153 0.01308377 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su1_l_visual">
+      <origin xyz="0.00000487 -0.00000034 -0.00001411" rpy="0.00000153 0.01308377 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="su2_l">
+    <inertial>
+      <origin xyz="0.09534284 0 -0.11345422" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w2_l_visual">
+      <origin xyz="0.18020126 -0.17799986 -0.26143861" rpy="0.00000153 -0.18138432 -0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm2_l_visual">
+      <origin xyz="0.0548454 -0.00000021 -0.06371014" rpy="0.00000153 -0.01177964 0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su2_l_visual">
+      <origin xyz="0.0000052 -0.00000035 0.00000794" rpy="0.00000153 -0.01177964 0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w2_l_visual">
+      <origin xyz="0.18020126 -0.17799986 -0.26143861" rpy="0.00000153 -0.18138432 -0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm2_l_visual">
+      <origin xyz="0.0548454 -0.00000021 -0.06371014" rpy="0.00000153 -0.01177964 0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su2_l_visual">
+      <origin xyz="0.0000052 -0.00000035 0.00000794" rpy="0.00000153 -0.01177964 0.00000014"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="su3_l">
+    <inertial>
+      <origin xyz="0.09534284 0 -0.11345422" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w3_l_visual">
+      <origin xyz="0.17887641 0.17799968 -0.25928122" rpy="0.00000153 -0.18436321 -0.00000015"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm2_l_visual">
+      <origin xyz="0.05326689 -0.00000051 -0.06171445" rpy="0.00000153 -0.01304728 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su2_l_visual">
+      <origin xyz="0.00000513 -0.00000063 0.00000918" rpy="0.00000153 -0.01304728 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w3_l_visual">
+      <origin xyz="0.17887641 0.17799968 -0.25928122" rpy="0.00000153 -0.18436321 -0.00000015"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm2_l_visual">
+      <origin xyz="0.05326689 -0.00000051 -0.06171445" rpy="0.00000153 -0.01304728 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su2_l_visual">
+      <origin xyz="0.00000513 -0.00000063 0.00000918" rpy="0.00000153 -0.01304728 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/su2_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="su4_l">
+    <inertial>
+      <origin xyz="-0.09534284 0 -0.11345422" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w4_l_visual">
+      <origin xyz="-0.17886362 0.17899988 -0.25926846" rpy="0.00000153 0.00352696 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm1_l_visual">
+      <origin xyz="-0.05324107 -0.00000034 -0.06170982" rpy="0.00000153 0.01312017 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="su1_l_visual">
+      <origin xyz="0.00000481 -0.00000044 -0.00001283" rpy="0.00000153 0.01312017 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w4_l_visual">
+      <origin xyz="-0.17886362 0.17899988 -0.25926846" rpy="0.00000153 0.00352696 0.00000013"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm1_l_visual">
+      <origin xyz="-0.05324107 -0.00000034 -0.06170982" rpy="0.00000153 0.01312017 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="su1_l_visual">
+      <origin xyz="0.00000481 -0.00000044 -0.00001283" rpy="0.00000153 0.01312017 0.00000016"/>
+      <geometry>
+        <mesh filename="./meshes/su1_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="W1_l">
+    <inertial>
+      <origin xyz="0.00001717 0.02526498 0.00000202" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51353759" ixy="0" ixz="0" iyy="0.89176303" iyz="0" izz="0.51356781"/>
+    </inertial>
+    <visual name="W1_l_visual">
+      <origin xyz="-0.00000017 0.00000009 -0.00000007" rpy="0.00000002 0.13844999 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W1_l_visual">
+      <origin xyz="-0.00000017 0.00000009 -0.00000007" rpy="0.00000002 0.13844999 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W1_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="W2_l">
+    <inertial>
+      <origin xyz="0.0000157 0.02526498 -0.00000723" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51353973" ixy="0" ixz="0" iyy="0.89176297" iyz="0" izz="0.5135656"/>
+    </inertial>
+    <visual name="W2_l_visual">
+      <origin xyz="0.00000011 0.00000013 0.00000009" rpy="-0.00000004 -0.31784487 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W2_l_visual">
+      <origin xyz="0.00000011 0.00000013 0.00000009" rpy="-0.00000004 -0.31784487 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W2_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="W3_l">
+    <inertial>
+      <origin xyz="0.00001282 -0.02526498 0.00001159" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51354796" ixy="0" ixz="0" iyy="0.89176297" iyz="0" izz="0.51355737"/>
+    </inertial>
+    <visual name="W3_l_visual">
+      <origin xyz="0.00000024 -0.00000004 -0.00000014" rpy="-0.00000005 -0.32813157 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W3_l_visual">
+      <origin xyz="0.00000024 -0.00000004 -0.00000014" rpy="-0.00000005 -0.32813157 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W3_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="W4_l">
+    <inertial>
+      <origin xyz="0.00000635 -0.02526498 0.00001607" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51356244" ixy="0" ixz="0" iyy="0.89176303" iyz="0" izz="0.51354289"/>
+    </inertial>
+    <visual name="W4_l_visual">
+      <origin xyz="-0.00000019 -0 -0.00000006" rpy="0.00000002 0.14736649 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="W4_l_visual">
+      <origin xyz="-0.00000019 -0 -0.00000006" rpy="0.00000002 0.14736649 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/W4_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="sm1_l">
+    <inertial>
+      <origin xyz="-0.0107416 0 -0.01278208" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w1_l_visual">
+      <origin xyz="-0.18164911 -0.17899996 -0.03397286" rpy="-0.00000002 0.85362519 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm1_l_visual">
+      <origin xyz="0.04998947 0.00000001 -0.00000069" rpy="0 0.87192115 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w1_l_visual">
+      <origin xyz="-0.18164911 -0.17899996 -0.03397286" rpy="-0.00000002 0.85362519 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm1_l_visual">
+      <origin xyz="0.04998947 0.00000001 -0.00000069" rpy="0 0.87192115 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="sm2_l">
+    <inertial>
+      <origin xyz="0.0107416 0 -0.01278208" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w2_l_visual">
+      <origin xyz="0.18420836 -0.17799994 -0.03397336" rpy="-0 -1.04152588 -0.00000003"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm2_l_visual">
+      <origin xyz="-0.04743014 0.00000003 -0.00000086" rpy="0 -0.8719212 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w2_l_visual">
+      <origin xyz="0.18420836 -0.17799994 -0.03397336" rpy="-0 -1.04152588 -0.00000003"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm2_l_visual">
+      <origin xyz="-0.04743014 0.00000003 -0.00000086" rpy="0 -0.8719212 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="sm3_l">
+    <inertial>
+      <origin xyz="0.0107416 0 -0.01278208" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w3_l_visual">
+      <origin xyz="0.18166759 0.17799988 -0.03396826" rpy="-0 -1.04323713 -0.00000003"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm2_l_visual">
+      <origin xyz="-0.04997139 0.00000001 0.00000048" rpy="0 -0.8719212 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w3_l_visual">
+      <origin xyz="0.18166759 0.17799988 -0.03396826" rpy="-0 -1.04323713 -0.00000003"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm2_l_visual">
+      <origin xyz="-0.04997139 0.00000001 0.00000048" rpy="0 -0.8719212 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm2_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="sm4_l">
+    <inertial>
+      <origin xyz="-0.0107416 0 -0.01278208" rpy="0 0 0"/>
+      <mass value="0.71580684"/>
+      <inertia ixx="0.00263766" ixy="0" ixz="0" iyy="0.00427194" iyz="0" izz="0.0019583"/>
+    </inertial>
+    <visual name="w4_l_visual">
+      <origin xyz="-0.18163689 0.17899995 -0.03397058" rpy="-0.00000002 0.86232794 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <visual name="sm1_l_visual">
+      <origin xyz="0.05000193 0.00000001 -0.00000007" rpy="0 0.87192115 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w4_l_visual">
+      <origin xyz="-0.18163689 0.17899995 -0.03397058" rpy="-0.00000002 0.86232794 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </collision>
+    <collision name="sm1_l_visual">
+      <origin xyz="0.05000193 0.00000001 -0.00000007" rpy="0 0.87192115 0"/>
+      <geometry>
+        <mesh filename="./meshes/sm1_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="w1_l">
+    <inertial>
+      <origin xyz="0.00001717 0.02526498 0.00000202" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51353759" ixy="0" ixz="0" iyy="0.89176303" iyz="0" izz="0.51356781"/>
+    </inertial>
+    <visual name="w1_l_visual">
+      <origin xyz="0.00000165 0.00000004 -0.00000094" rpy="-0 -0.01829596 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w1_l_visual">
+      <origin xyz="0.00000165 0.00000004 -0.00000094" rpy="-0 -0.01829596 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w1_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="w2_l">
+    <inertial>
+      <origin xyz="0.0000157 0.02526498 -0.00000723" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51353973" ixy="0" ixz="0" iyy="0.89176297" iyz="0" izz="0.5135656"/>
+    </inertial>
+    <visual name="w2_l_visual">
+      <origin xyz="-0.00000198 0.00000004 -0.00000108" rpy="-0.00000002 -0.16960468 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w2_l_visual">
+      <origin xyz="-0.00000198 0.00000004 -0.00000108" rpy="-0.00000002 -0.16960468 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/w2_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="w3_l">
+    <inertial>
+      <origin xyz="0.00001282 -0.02526498 0.00001159" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51354796" ixy="0" ixz="0" iyy="0.89176297" iyz="0" izz="0.51355737"/>
+    </inertial>
+    <visual name="w3_l_visual">
+      <origin xyz="0.00000122 -0.00000013 0.00000097" rpy="-0.00000002 -0.17131593 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w3_l_visual">
+      <origin xyz="0.00000122 -0.00000013 0.00000097" rpy="-0.00000002 -0.17131593 -0.00000001"/>
+      <geometry>
+        <mesh filename="./meshes/w3_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="w4_l">
+    <inertial>
+      <origin xyz="0.00000635 -0.02526498 0.00001607" rpy="0 0 0"/>
+      <mass value="16.93852615"/>
+      <inertia ixx="0.51356244" ixy="0" ixz="0" iyy="0.89176303" iyz="0" izz="0.51354289"/>
+    </inertial>
+    <visual name="w4_l_visual">
+      <origin xyz="0.00000022 -0.00000007 -0.00000004" rpy="-0 -0.00959321 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision name="w4_l_visual">
+      <origin xyz="0.00000022 -0.00000007 -0.00000004" rpy="-0 -0.00959321 -0.00000002"/>
+      <geometry>
+        <mesh filename="./meshes/w4_l_visual.obj"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="floating_base" type="floating">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+  <joint name="tu1_j" type="revolute">
+    <origin xyz="0.30197181 -0.35420322 0.49827658" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="tu1_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="tu2_j" type="revolute">
+    <origin xyz="-0.068024 -0.35421182 0.50003932" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="tu2_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="tu3_j" type="revolute">
+    <origin xyz="-0.068039 0.35378811 0.50034828" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="tu3_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="tu4_j" type="revolute">
+    <origin xyz="0.30195681 0.35379672 0.49858554" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="tu4_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="su1_j" type="revolute">
+    <origin xyz="0.77734861 -0.40422707 0.57599086" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="su1_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="su2_j" type="revolute">
+    <origin xyz="-0.54263639 -0.40525777 0.5822791" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="su2_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="su3_j" type="revolute">
+    <origin xyz="-0.54265355 0.40474216 0.58263257" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="su3_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="su4_j" type="revolute">
+    <origin xyz="0.77733149 0.40377288 0.57634346" rpy="0.00043638 0.00476417 0.00002326"/>
+    <parent link="base_link"/>
+    <child link="su4_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="W1_j" type="revolute">
+    <origin xyz="0.29612931 -0.22899997 -0.17928286" rpy="0.00000153 -0.14379145 -0.00000007"/>
+    <parent link="tu1_l"/>
+    <child link="W1_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="W2_j" type="revolute">
+    <origin xyz="-0.29480203 -0.22899987 -0.18143904" rpy="0.00000156 0.13647291 0.00000037"/>
+    <parent link="tu2_l"/>
+    <child link="W2_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="W3_j" type="revolute">
+    <origin xyz="-0.29611864 0.22899984 -0.1792808" rpy="0.00000156 0.14377153 0.00000037"/>
+    <parent link="tu3_l"/>
+    <child link="W3_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="W4_j" type="revolute">
+    <origin xyz="0.29614081 0.2289999 -0.1792619" rpy="0.00000153 -0.14385616 -0.00000007"/>
+    <parent link="tu4_l"/>
+    <child link="W4_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="sm1_j" type="prismatic">
+    <origin xyz="-0.085906 -0.0000002 -0.09956863" rpy="0.00000234 -0.85883738 -0.00000163"/>
+    <parent link="su1_l"/>
+    <child link="sm1_l"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.05" upper="0.05" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "linear", "source": "physx"} -->
+  </joint>
+  <joint name="sm2_j" type="prismatic">
+    <origin xyz="0.08578616 -0.00000018 -0.09965853" rpy="0.00000234 0.86014155 0.00000193"/>
+    <parent link="su2_l"/>
+    <child link="sm2_l"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="-0.05" upper="0.05" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "linear", "source": "physx"} -->
+  </joint>
+  <joint name="sm3_j" type="prismatic">
+    <origin xyz="0.08591236 -0.00000046 -0.09954848" rpy="0.00000234 0.85887392 0.00000192"/>
+    <parent link="su3_l"/>
+    <child link="sm3_l"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="-0.05" upper="0.05" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "linear", "source": "physx"} -->
+  </joint>
+  <joint name="sm4_j" type="prismatic">
+    <origin xyz="-0.08590967 -0.0000003 -0.09956422" rpy="0.00000234 -0.85880098 -0.00000163"/>
+    <parent link="su4_l"/>
+    <child link="sm4_l"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.05" upper="0.05" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "linear", "source": "physx"} -->
+  </joint>
+  <joint name="w1_j" type="revolute">
+    <origin xyz="-0.18164946 -0.179 -0.03397099" rpy="0 0.87192115 0"/>
+    <parent link="sm1_l"/>
+    <child link="w1_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="w2_j" type="revolute">
+    <origin xyz="0.18420881 -0.17799998 -0.03397115" rpy="0 -0.8719212 0"/>
+    <parent link="sm2_l"/>
+    <child link="w2_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="w3_j" type="revolute">
+    <origin xyz="0.18166755 0.17800002 -0.03396981" rpy="0 -0.8719212 0"/>
+    <parent link="sm3_l"/>
+    <child link="w3_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <joint name="w4_j" type="revolute">
+    <origin xyz="-0.181637 0.17900002 -0.03397038" rpy="0 0.87192115 0"/>
+    <parent link="sm4_l"/>
+    <child link="w4_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-inf" upper="inf" velocity="17453.29251994"/>
+    <dynamics friction="0"/>
+    <!-- isaac:source_drive {"armature": 0.0, "drive": {"damping": 0.0, "max_force": Infinity, "stiffness": 0.0, "target_position": 0.0}, "instance": "angular", "source": "physx"} -->
+  </joint>
+  <loop_joint name="lock_w1_W1" type="fixed">
+    <link1 link="w1_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W1_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
+  <loop_joint name="lock_w2_W2" type="fixed">
+    <link1 link="w2_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W2_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
+  <loop_joint name="lock_w3_W3" type="fixed">
+    <link1 link="w3_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W3_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
+  <loop_joint name="lock_w4_W4" type="fixed">
+    <link1 link="w4_l" xyz="0 0 0" rpy="0 0 0"/>
+    <link2 link="W4_l" xyz="0 0 0" rpy="0 0 0"/>
+  </loop_joint>
+</robot>

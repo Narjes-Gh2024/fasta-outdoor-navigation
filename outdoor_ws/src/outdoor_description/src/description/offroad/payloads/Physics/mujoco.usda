@@ -1,0 +1,513 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.2.0"
+    }
+    defaultPrim = "outdoor_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp7itnoy7t/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/usdex_offroad/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/temp_offroad/offroad.usd
+
+
+Generated from Composed Stage of root layer /home/roboticlab1/fasta-outdoor-navigation/outdoor_ws/src/outdoor_description/src/description/offroad/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "outdoor_description"
+{
+    over "Geometry"
+    {
+        over "floor" (
+            prepend apiSchemas = ["MjcCollisionAPI"]
+        )
+        {
+        }
+
+        over "base_link"
+        {
+            over "tu1_l"
+            {
+                over "W1_l"
+                {
+                    over "W1_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                    }
+
+                    over "W1_l_visual"
+                    {
+                    }
+                }
+
+                over "tu1_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "tu1_l_visual"
+                {
+                }
+            }
+
+            over "tu2_l"
+            {
+                over "W2_l"
+                {
+                    over "W2_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                    }
+
+                    over "W2_l_visual"
+                    {
+                    }
+                }
+
+                over "tu2_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "tu2_l_visual"
+                {
+                }
+            }
+
+            over "tu3_l"
+            {
+                over "W3_l"
+                {
+                    over "W3_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                    }
+
+                    over "W3_l_visual"
+                    {
+                    }
+                }
+
+                over "tu3_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "tu3_l_visual"
+                {
+                }
+            }
+
+            over "tu4_l"
+            {
+                over "W4_l"
+                {
+                    over "W4_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                    }
+
+                    over "W4_l_visual"
+                    {
+                    }
+                }
+
+                over "tu4_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "tu4_l_visual"
+                {
+                }
+            }
+
+            over "su1_l"
+            {
+                over "sm1_l"
+                {
+                    over "w1_l"
+                    {
+                        over "w1_j" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                        }
+
+                        over "w1_l_visual"
+                        {
+                        }
+                    }
+
+                    over "sm1_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.07
+                        uniform double mjc:stiffness = 24000
+                    }
+
+                    over "sm1_l_visual"
+                    {
+                    }
+                }
+
+                over "su1_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "su1_l_visual"
+                {
+                }
+            }
+
+            over "su2_l"
+            {
+                over "sm2_l"
+                {
+                    over "w2_l"
+                    {
+                        over "w2_j" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                        }
+
+                        over "w2_l_visual"
+                        {
+                        }
+                    }
+
+                    over "sm2_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.07
+                        uniform double mjc:stiffness = 24000
+                    }
+
+                    over "sm2_l_visual"
+                    {
+                    }
+                }
+
+                over "su2_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "su2_l_visual"
+                {
+                }
+            }
+
+            over "su3_l"
+            {
+                over "sm3_l"
+                {
+                    over "w3_l"
+                    {
+                        over "w3_j" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                        }
+
+                        over "w3_l_visual"
+                        {
+                        }
+                    }
+
+                    over "sm3_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.07
+                        uniform double mjc:stiffness = 24000
+                    }
+
+                    over "sm3_l_visual"
+                    {
+                    }
+                }
+
+                over "su3_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "su3_l_visual"
+                {
+                }
+            }
+
+            over "su4_l"
+            {
+                over "sm4_l"
+                {
+                    over "w4_l"
+                    {
+                        over "w4_j" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                        }
+
+                        over "w4_l_visual"
+                        {
+                        }
+                    }
+
+                    over "sm4_j" (
+                        delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.07
+                        uniform double mjc:stiffness = 24000
+                    }
+
+                    over "sm4_l_visual"
+                    {
+                    }
+                }
+
+                over "su4_j" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                }
+
+                over "su4_l_visual"
+                {
+                }
+            }
+
+            over "base_link_visual"
+            {
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "PhysicsMaterial" (
+            prepend apiSchemas = ["MjcMaterialAPI"]
+        )
+        {
+        }
+
+        over "lock_w1_W1" (
+            prepend apiSchemas = ["MjcEqualityWeldAPI"]
+        )
+        {
+            uniform double[] mjc:solimp = [0.95, 0.99, 0.001, 0.5, 2]
+            uniform double[] mjc:solref = [0.01, 1]
+        }
+
+        over "lock_w2_W2" (
+            prepend apiSchemas = ["MjcEqualityWeldAPI"]
+        )
+        {
+            uniform double[] mjc:solimp = [0.95, 0.99, 0.001, 0.5, 2]
+            uniform double[] mjc:solref = [0.01, 1]
+        }
+
+        over "lock_w3_W3" (
+            prepend apiSchemas = ["MjcEqualityWeldAPI"]
+        )
+        {
+            uniform double[] mjc:solimp = [0.95, 0.99, 0.001, 0.5, 2]
+            uniform double[] mjc:solref = [0.01, 1]
+        }
+
+        over "lock_w4_W4" (
+            prepend apiSchemas = ["MjcEqualityWeldAPI"]
+        )
+        {
+            uniform double[] mjc:solimp = [0.95, 0.99, 0.001, 0.5, 2]
+            uniform double[] mjc:solref = [0.01, 1]
+        }
+
+        def MjcActuator "tu1_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu1_l/tu1_j>
+        }
+
+        def MjcActuator "W1_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu1_l/W1_l/W1_j>
+        }
+
+        def MjcActuator "tu2_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu2_l/tu2_j>
+        }
+
+        def MjcActuator "W2_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu2_l/W2_l/W2_j>
+        }
+
+        def MjcActuator "tu3_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu3_l/tu3_j>
+        }
+
+        def MjcActuator "W3_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu3_l/W3_l/W3_j>
+        }
+
+        def MjcActuator "tu4_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu4_l/tu4_j>
+        }
+
+        def MjcActuator "W4_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/tu4_l/W4_l/W4_j>
+        }
+
+        def MjcActuator "su1_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su1_l/su1_j>
+        }
+
+        def MjcActuator "sm1_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su1_l/sm1_l/sm1_j>
+        }
+
+        def MjcActuator "w1_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su1_l/sm1_l/w1_l/w1_j>
+        }
+
+        def MjcActuator "su2_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su2_l/su2_j>
+        }
+
+        def MjcActuator "sm2_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su2_l/sm2_l/sm2_j>
+        }
+
+        def MjcActuator "w2_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su2_l/sm2_l/w2_l/w2_j>
+        }
+
+        def MjcActuator "su3_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su3_l/su3_j>
+        }
+
+        def MjcActuator "sm3_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su3_l/sm3_l/sm3_j>
+        }
+
+        def MjcActuator "w3_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su3_l/sm3_l/w3_l/w3_j>
+        }
+
+        def MjcActuator "su4_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su4_l/su4_j>
+        }
+
+        def MjcActuator "sm4_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su4_l/sm4_l/sm4_j>
+        }
+
+        def MjcActuator "w4_j"
+        {
+            custom rel mjc:target
+            prepend rel mjc:target = </outdoor_description/Geometry/base_link/su4_l/sm4_l/w4_l/w4_j>
+        }
+    }
+
+    over "Materials"
+    {
+        over "groundplane"
+        {
+        }
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+
+over "PhysicsScene" (
+    prepend apiSchemas = ["MjcSceneAPI"]
+)
+{
+    uniform token mjc:compiler:angle = "radian"
+    uniform bool mjc:compiler:balanceInertia = 1
+    uniform bool mjc:flag:multiccd = 0
+}
+

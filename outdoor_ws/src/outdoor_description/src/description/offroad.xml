@@ -1,0 +1,262 @@
+<mujoco model="outdoor_description">
+  <default>
+    <default class="robot">
+      <default class="visual">
+        <geom contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="collision">
+        <geom contype="0" conaffinity="1" group="3" />
+      </default>
+    </default>
+    <default class="floor">
+      <geom type="plane" size="0 0 0.05" material="groundplane" />
+    </default>
+  </default>
+
+  <compiler angle="radian" meshdir="." balanceinertia="true" />
+
+  <visual>
+    <global offwidth="3840" offheight="2160" />
+  </visual>
+
+  <worldbody>
+    <body name="base_link" childclass="robot" pos="0 0 0.3223">
+      <geom name="base_link_collision" type="mesh" mesh="base_link_collision_base_link" class="collision" />
+      <geom name="base_link_visual" type="mesh" mesh="base_link_base_link" material="default_material" class="visual" />
+      <body name="tu1_l" pos="0.33 -0.354 0.215">
+        <inertial pos="0.147362309153983 -0.0333159854188 -0.1211687926663" mass="10.2132979097438" diaginertia="0.0358725371406297 0.085464141095508 0.0506422080598156" />
+        <joint name="tu1_j" type="hinge" axis="0 1 0" />
+        <geom name="tu1_l_collision" type="mesh" mesh="tu1_l_collision_tu1_l" class="collision" />
+        <geom name="tu1_l_visual" type="mesh" mesh="tu1_l_tu1_l" material="default_material" class="visual" />
+        <body name="W1_l" pos="0.26738 -0.229 -0.21986">
+          <inertial pos="1.71696358072237E-05 0.025264976547993 2.02005059561465E-06" mass="0" diaginertia="0 0 0" />
+          <!-- <inertial pos="1.71696358072237E-05 0.025264976547993 2.02005059561465E-06" mass="16.9385252789344" diaginertia="0.513537561453538 0.891763002094289 0.513567792828017" /> -->
+          <joint name="W1_j" type="hinge" axis="0 1 0" />
+          <geom name="W1_l_collision" type="mesh" mesh="W1_l_collision_W1_l" class="collision" />
+          <geom name="W1_l_visual" type="mesh" mesh="W1_l_W1_l" material="default_material" class="visual" />
+        </body>
+      </body>
+      <body name="tu2_l" pos="-0.04 -0.354 0.215">
+        <inertial pos="-0.137021532460763 -0.0195472382042864 -0.105386640443532" mass="7.72532312777463" diaginertia="0.0263090204959749 0.0639279889046924 0.0385789482600205" />
+        <joint name="tu2_j" type="hinge" axis="0 1 0" />
+        <geom name="tu2_l_collision" type="mesh" mesh="tu2_l_collision_tu2_l" class="collision" />
+        <geom name="tu2_l_visual" type="mesh" mesh="tu2_l_tu2_l" material="default_material" class="visual" />
+        <body name="W2_l" pos="-0.26738 -0.229 -0.21986">
+          <inertial pos="1.57026386815029E-05 0.0252649765331265 -7.22875534110018E-06" mass="0" diaginertia="0 0 0" />
+          <!-- <inertial pos="1.57026386815029E-05 0.0252649765331265 -7.22875534110018E-06" mass="16.9385252782885" diaginertia="0.513539751870816 0.891763001369152 0.51356560120949" /> -->
+          <joint name="W2_j" type="hinge" axis="0 1 0" />
+          <geom name="W2_l_collision" type="mesh" mesh="W2_l_collision_W2_l" class="collision" />
+          <geom name="W2_l_visual" type="mesh" mesh="W2_l_W2_l" material="default_material" class="visual" />
+        </body>
+      </body>
+      <body name="tu3_l" pos="-0.04 0.354 0.215">
+        <inertial pos="-0.147362309060457 0.033315985364701 -0.121168792605429" mass="10.2132979014202" diaginertia="0.035872537136603 0.0854641410781346 0.0506422080461984" />
+        <joint name="tu3_j" type="hinge" axis="0 1 0" />
+        <geom name="tu3_l_collision" type="mesh" mesh="tu3_l_collision_tu3_l" class="collision" />
+        <geom name="tu3_l_visual" type="mesh" mesh="tu3_l_tu3_l" material="default_material" class="visual" />
+        <body name="W3_l" pos="-0.26738 0.229 -0.21986">
+          <inertial pos="1.28236511909852E-05 -0.0252649764628815 1.15891516132491E-05" mass="0" diaginertia="0 0 0" />
+          <!-- <inertial pos="1.28236511909852E-05 -0.0252649764628815 1.15891516132491E-05" mass="16.9385252831856" diaginertia="0.513547983602694 0.891763001235492 0.5135573693724" /> -->
+          <joint name="W3_j" type="hinge" axis="0 1 0" />
+          <geom name="W3_l_collision" type="mesh" mesh="W3_l_collision_W3_l" class="collision" />
+          <geom name="W3_l_visual" type="mesh" mesh="W3_l_W3_l" material="default_material" class="visual" />
+        </body>
+      </body>
+      <body name="tu4_l" pos="0.33 0.354 0.215">
+        <inertial pos="0.137021532460767 0.0195472382042849 -0.105386640443537" mass="7.72532312777463" diaginertia="0.0263090204959758 0.0639279889046924 0.0385789482600198" />
+        <joint name="tu4_j" type="hinge" axis="0 1 0" />
+        <geom name="tu4_l_collision" type="mesh" mesh="tu4_l_collision_tu4_l" class="collision" />
+        <geom name="tu4_l_visual" type="mesh" mesh="tu4_l_tu4_l" material="default_material" class="visual" />
+        <body name="W4_l" pos="0.26738 0.229 -0.21986">
+          <inertial pos="6.34908103325227E-06 -0.0252649765321394 1.60723253489125E-05" mass="0" diaginertia="0 0 0" />
+          <!-- <inertial pos="6.34908103325227E-06 -0.0252649765321394 1.60723253489125E-05" mass="16.9385252734549" diaginertia="0.513562463994304 0.891763002998777 0.513542891684021" /> -->
+          <joint name="W4_j" type="hinge" axis="0 1 0" />
+          <geom name="W4_l_collision" type="mesh" mesh="W4_l_collision_W4_l" class="collision" />
+          <geom name="W4_l_visual" type="mesh" mesh="W4_l_W4_l" material="default_material" class="visual" />
+        </body>
+      </body>
+      <body name="su1_l" pos="0.805 -0.404 0.295">
+        <inertial pos="-0.0953428362833662 5.55111512312578E-17 -0.113454221906962" mass="0.7158068478374" diaginertia="0.0026376572344764 0.00427194248962655 0.00195830243241237" />
+        <joint name="su1_j" type="hinge" axis="0 1 0" />
+        <geom name="su1_l_collision" type="mesh" mesh="su1_l_collision_su1_l" class="collision" />
+        <geom name="su1_l_visual" type="mesh" mesh="su1_l_su1_l" material="default_material" class="visual" />
+        <body name="sm1_l" pos="-0.084601 0 -0.10067">
+          <inertial pos="-0.0107415978133949 0 -0.0127820785437341" mass="0.7158068478374" diaginertia="0.00263765723447639 0.00427194248962655 0.00195830243241239" />
+          <joint name="sm1_j" type="slide" range="-0.05 0.05" axis="0.64336 0 0.76557" stiffness="24000" damping="0.07" />
+          <geom name="sm1_l_collision" type="mesh" mesh="sm1_l_collision_sm1_l" class="collision" />
+          <geom name="sm1_l_visual" type="mesh" mesh="sm1_l_sm1_l" material="default_material" class="visual" />
+          <body name="w1_l" pos="-0.12302 -0.179 -0.19919">
+            <inertial pos="1.71696358072237E-05 0.0252649765479932 2.02005059565108E-06" mass="16.9385252789344" diaginertia="0.513537561453534 0.891763002094288 0.513567792828014" />
+            <joint name="w1_j" type="hinge" axis="0 1 0" />
+            <geom name="w1_l_collision" type="mesh" mesh="w1_l_collision_w1_l" class="collision" />
+            <geom name="w1_l_visual" type="mesh" mesh="w1_l_w1_l" material="default_material" class="visual" />
+          </body>
+        </body>
+      </body>
+      <body name="su2_l" pos="-0.515 -0.405 0.295">
+        <inertial pos="0.0953428362833642 -7.21644966006352E-16 -0.113454221906967" mass="0.715806847837399" diaginertia="0.0026376572344764 0.00427194248962655 0.00195830243241238" />
+        <joint name="su2_j" type="hinge" axis="0 1 0" />
+        <geom name="su2_l_collision" type="mesh" mesh="su2_l_collision_su2_l" class="collision" />
+        <geom name="su2_l_visual" type="mesh" mesh="su2_l_su2_l" material="default_material" class="visual" />
+        <body name="sm2_l" pos="0.084601 0 -0.10067">
+          <inertial pos="0.0107415978133951 2.05391259555654E-15 -0.012782078543734" mass="0.715806847837399" diaginertia="0.00263765723447641 0.00427194248962655 0.00195830243241236" />
+          <joint name="sm2_j" type="slide" range="-0.05 0.05" axis="-0.64336 0 0.76557" stiffness="24000" damping="0.07" />
+          <geom name="sm2_l_collision" type="mesh" mesh="sm2_l_collision_sm2_l" class="collision" />
+          <geom name="sm2_l_visual" type="mesh" mesh="sm2_l_sm2_l" material="default_material" class="visual" />
+          <body name="w2_l" pos="0.12302 -0.178 -0.19919">
+            <inertial pos="1.57026386815584E-05 0.0252649765331266 -7.22875534110191E-06" mass="16.9385252782884" diaginertia="0.513539751870783 0.891763001369155 0.513565601209458" />
+            <joint name="w2_j" type="hinge" axis="0 1 0" />
+            <geom name="w2_l_collision" type="mesh" mesh="w2_l_collision_w2_l" class="collision" />
+            <geom name="w2_l_visual" type="mesh" mesh="w2_l_w2_l" material="default_material" class="visual" />
+          </body>
+        </body>
+      </body>
+      <body name="su3_l" pos="-0.515 0.405 0.295">
+        <inertial pos="0.0953428362833642 -9.88098491916389E-15 -0.113454221906967" mass="0.715806847837399" diaginertia="0.0026376572344764 0.00427194248962654 0.00195830243241237" />
+        <joint name="su3_j" type="hinge" axis="0 1 0" />
+        <geom name="su3_l_collision" type="mesh" mesh="su3_l_collision_su3_l" class="collision" />
+        <geom name="su3_l_visual" type="mesh" mesh="su3_l_su3_l" material="default_material" class="visual" />
+        <body name="sm3_l" pos="0.084601 0 -0.10067">
+          <inertial pos="0.010741597813395 9.43689570931383E-16 -0.0127820785437343" mass="0.715806847837399" diaginertia="0.00263765723447641 0.00427194248962654 0.00195830243241236" />
+          <joint name="sm3_j" type="slide" range="-0.05 0.05" axis="-0.64336 0 0.76557" stiffness="24000" damping="0.07" />
+          <geom name="sm3_l_collision" type="mesh" mesh="sm3_l_collision_sm3_l" class="collision" />
+          <geom name="sm3_l_visual" type="mesh" mesh="sm3_l_sm3_l" material="default_material" class="visual" />
+          <body name="w3_l" pos="0.12302 0.178 -0.19919">
+            <inertial pos="1.28236511908741E-05 -0.0252649764628814 1.15891516133063E-05" mass="16.9385252831856" diaginertia="0.513547983602772 0.891763001235491 0.513557369372476" />
+            <joint name="w3_j" type="hinge" axis="0 1 0" />
+            <geom name="w3_l_collision" type="mesh" mesh="w3_l_collision_w3_l" class="collision" />
+            <geom name="w3_l_visual" type="mesh" mesh="w3_l_w3_l" material="default_material" class="visual" />
+          </body>
+        </body>
+      </body>
+      <body name="su4_l" pos="0.805 0.404 0.295">
+        <inertial pos="-0.0953428362833703 2.27595720048157E-15 -0.113454221906963" mass="0.715806847837399" diaginertia="0.00263765723447619 0.00427194248962654 0.00195830243241258" />
+        <joint name="su4_j" type="hinge" axis="0 1 0" />
+        <geom name="su4_l_collision" type="mesh" mesh="su4_l_collision_su4_l" class="collision" />
+        <geom name="su4_l_visual" type="mesh" mesh="su4_l_su4_l" material="default_material" class="visual" />
+        <body name="sm4_l" pos="-0.084601 0 -0.10067">
+          <inertial pos="-0.0107415978133959 -2.72004641033163E-15 -0.0127820785437335" mass="0.715806847837399" diaginertia="0.00263765723447619 0.00427194248962654 0.00195830243241258" />
+          <joint name="sm4_j" type="slide" range="-0.05 0.05" axis="0.64336 0 0.76557" stiffness="24000" damping="0.07" />
+          <geom name="sm4_l_collision" type="mesh" mesh="sm4_l_collision_sm4_l" class="collision" />
+          <geom name="sm4_l_visual" type="mesh" mesh="sm4_l_sm4_l" material="default_material" class="visual" />
+          <body name="w4_l" pos="-0.12302 0.179 -0.19919">
+            <inertial pos="6.34908103358534E-06 -0.0252649765321398 1.60723253488327E-05" mass="16.9385252734549" diaginertia="0.513562463994312 0.891763002998782 0.51354289168403" />
+            <joint name="w4_j" type="hinge" axis="0 1 0" />
+            <geom name="w4_l_collision" type="mesh" mesh="w4_l_collision_w4_l" class="collision" />
+            <geom name="w4_l_visual" type="mesh" mesh="w4_l_w4_l" material="default_material" class="visual" />
+          </body>
+        </body>
+      </body>
+      <freejoint name="floating_base" />
+    </body>
+    <light pos="0 0 2." dir="0 0 -1" directional="true" />
+    <geom name="floor" class="floor" size="0 0 0.05" />
+  </worldbody>
+
+  <asset>
+    <material name="default_material" rgba="0.7 0.7 0.7 1" />
+    <mesh name="base_link_collision_base_link" file="./meshes/base_link.STL" />
+    <mesh name="base_link_base_link" file="./meshes/base_link.STL" />
+    <mesh name="tu1_l_collision_tu1_l" file="./meshes/tu1_l.STL" />
+    <mesh name="tu1_l_tu1_l" file="./meshes/tu1_l.STL" />
+    <mesh name="W1_l_collision_W1_l" file="./meshes/W1_l.STL" />
+    <mesh name="W1_l_W1_l" file="./meshes/W1_l.STL" />
+    <mesh name="tu2_l_collision_tu2_l" file="./meshes/tu2_l.STL" />
+    <mesh name="tu2_l_tu2_l" file="./meshes/tu2_l.STL" />
+    <mesh name="W2_l_collision_W2_l" file="./meshes/W2_l.STL" />
+    <mesh name="W2_l_W2_l" file="./meshes/W2_l.STL" />
+    <mesh name="tu3_l_collision_tu3_l" file="./meshes/tu3_l.STL" />
+    <mesh name="tu3_l_tu3_l" file="./meshes/tu3_l.STL" />
+    <mesh name="W3_l_collision_W3_l" file="./meshes/W3_l.STL" />
+    <mesh name="W3_l_W3_l" file="./meshes/W3_l.STL" />
+    <mesh name="tu4_l_collision_tu4_l" file="./meshes/tu4_l.STL" />
+    <mesh name="tu4_l_tu4_l" file="./meshes/tu4_l.STL" />
+    <mesh name="W4_l_collision_W4_l" file="./meshes/W4_l.STL" />
+    <mesh name="W4_l_W4_l" file="./meshes/W4_l.STL" />
+    <mesh name="su1_l_collision_su1_l" file="./meshes/su1_l.STL" />
+    <mesh name="su1_l_su1_l" file="./meshes/su1_l.STL" />
+    <mesh name="sm1_l_collision_sm1_l" file="./meshes/sm1_l.STL" />
+    <mesh name="sm1_l_sm1_l" file="./meshes/sm1_l.STL" />
+    <mesh name="w1_l_collision_w1_l" file="./meshes/w1_l.STL" />
+    <mesh name="w1_l_w1_l" file="./meshes/w1_l.STL" />
+    <mesh name="su2_l_collision_su2_l" file="./meshes/su2_l.STL" />
+    <mesh name="su2_l_su2_l" file="./meshes/su2_l.STL" />
+    <mesh name="sm2_l_collision_sm2_l" file="./meshes/sm2_l.STL" />
+    <mesh name="sm2_l_sm2_l" file="./meshes/sm2_l.STL" />
+    <mesh name="w2_l_collision_w2_l" file="./meshes/w2_l.STL" />
+    <mesh name="w2_l_w2_l" file="./meshes/w2_l.STL" />
+    <mesh name="su3_l_collision_su3_l" file="./meshes/su3_l.STL" />
+    <mesh name="su3_l_su3_l" file="./meshes/su3_l.STL" />
+    <mesh name="sm3_l_collision_sm3_l" file="./meshes/sm3_l.STL" />
+    <mesh name="sm3_l_sm3_l" file="./meshes/sm3_l.STL" />
+    <mesh name="w3_l_collision_w3_l" file="./meshes/w3_l.STL" />
+    <mesh name="w3_l_w3_l" file="./meshes/w3_l.STL" />
+    <mesh name="su4_l_collision_su4_l" file="./meshes/su4_l.STL" />
+    <mesh name="su4_l_su4_l" file="./meshes/su4_l.STL" />
+    <mesh name="sm4_l_collision_sm4_l" file="./meshes/sm4_l.STL" />
+    <mesh name="sm4_l_sm4_l" file="./meshes/sm4_l.STL" />
+    <mesh name="w4_l_collision_w4_l" file="./meshes/w4_l.STL" />
+    <mesh name="w4_l_w4_l" file="./meshes/w4_l.STL" />
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2" />
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072" />
+  </asset>
+
+  <actuator>
+    <motor name="tu1_j" joint="tu1_j" />
+    <motor name="W1_j" joint="W1_j" />
+    <motor name="tu2_j" joint="tu2_j" />
+    <motor name="W2_j" joint="W2_j" />
+    <motor name="tu3_j" joint="tu3_j" />
+    <motor name="W3_j" joint="W3_j" />
+    <motor name="tu4_j" joint="tu4_j" />
+    <motor name="W4_j" joint="W4_j" />
+    <motor name="su1_j" joint="su1_j" />
+    <motor name="sm1_j" joint="sm1_j" />
+    <motor name="w1_j" joint="w1_j" />
+    <motor name="su2_j" joint="su2_j" />
+    <motor name="sm2_j" joint="sm2_j" />
+    <motor name="w2_j" joint="w2_j" />
+    <motor name="su3_j" joint="su3_j" />
+    <motor name="sm3_j" joint="sm3_j" />
+    <motor name="w3_j" joint="w3_j" />
+    <motor name="su4_j" joint="su4_j" />
+    <motor name="sm4_j" joint="sm4_j" />
+    <motor name="w4_j" joint="w4_j" />
+  </actuator>
+
+  <equality>
+    <weld name="lock_w1_W1"
+          body1="w1_l"
+          body2="W1_l"
+          relpose="0 0 0 1 0 0 0"
+          solref="0.01 1"
+          solimp="0.95 0.99 0.001" />
+
+    <weld name="lock_w2_W2"
+          body1="w2_l"
+          body2="W2_l"
+          relpose="0 0 0 1 0 0 0"
+          solref="0.01 1"
+          solimp="0.95 0.99 0.001" />
+
+    <weld name="lock_w3_W3"
+          body1="w3_l"
+          body2="W3_l"
+          relpose="0 0 0 1 0 0 0"
+          solref="0.01 1"
+          solimp="0.95 0.99 0.001" />
+
+    <weld name="lock_w4_W4"
+          body1="w4_l"
+          body2="W4_l"
+          relpose="0 0 0 1 0 0 0"
+          solref="0.01 1"
+          solimp="0.95 0.99 0.001" />
+
+  </equality>
+  
+  <visual>
+    <rgba haze="0.15 0.25 0.35 1" />
+  </visual>
+</mujoco>

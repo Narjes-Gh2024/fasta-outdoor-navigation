@@ -1,0 +1,299 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.2.0"
+    }
+    defaultPrim = "outdoor_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp7itnoy7t/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/usdex_offroad/outdoor_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_offroad_oe8tigi2/temp_offroad/offroad.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "outdoor_description" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </outdoor_description/Geometry/base_link/tu1_l/tu1_j>,
+        </outdoor_description/Geometry/base_link/tu2_l/tu2_j>,
+        </outdoor_description/Geometry/base_link/tu3_l/tu3_j>,
+        </outdoor_description/Geometry/base_link/tu4_l/tu4_j>,
+        </outdoor_description/Geometry/base_link/su1_l/su1_j>,
+        </outdoor_description/Geometry/base_link/su2_l/su2_j>,
+        </outdoor_description/Geometry/base_link/su3_l/su3_j>,
+        </outdoor_description/Geometry/base_link/su4_l/su4_j>,
+        </outdoor_description/Geometry/base_link/tu1_l/W1_l/W1_j>,
+        </outdoor_description/Geometry/base_link/tu2_l/W2_l/W2_j>,
+        </outdoor_description/Geometry/base_link/tu3_l/W3_l/W3_j>,
+        </outdoor_description/Geometry/base_link/tu4_l/W4_l/W4_j>,
+        </outdoor_description/Geometry/base_link/su1_l/sm1_l/sm1_j>,
+        </outdoor_description/Geometry/base_link/su1_l/sm1_l/w1_l/w1_j>,
+        </outdoor_description/Geometry/base_link/su2_l/sm2_l/sm2_j>,
+        </outdoor_description/Geometry/base_link/su2_l/sm2_l/w2_l/w2_j>,
+        </outdoor_description/Geometry/base_link/su3_l/sm3_l/sm3_j>,
+        </outdoor_description/Geometry/base_link/su3_l/sm3_l/w3_l/w3_j>,
+        </outdoor_description/Geometry/base_link/su4_l/sm4_l/sm4_j>,
+        </outdoor_description/Geometry/base_link/su4_l/sm4_l/w4_l/w4_j>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </outdoor_description/Geometry/base_link>,
+        </outdoor_description/Geometry/base_link/tu1_l>,
+        </outdoor_description/Geometry/base_link/tu1_l/W1_l>,
+        </outdoor_description/Geometry/base_link/tu2_l>,
+        </outdoor_description/Geometry/base_link/tu2_l/W2_l>,
+        </outdoor_description/Geometry/base_link/tu3_l>,
+        </outdoor_description/Geometry/base_link/tu3_l/W3_l>,
+        </outdoor_description/Geometry/base_link/tu4_l>,
+        </outdoor_description/Geometry/base_link/tu4_l/W4_l>,
+        </outdoor_description/Geometry/base_link/su1_l>,
+        </outdoor_description/Geometry/base_link/su1_l/sm1_l>,
+        </outdoor_description/Geometry/base_link/su1_l/sm1_l/w1_l>,
+        </outdoor_description/Geometry/base_link/su2_l>,
+        </outdoor_description/Geometry/base_link/su2_l/sm2_l>,
+        </outdoor_description/Geometry/base_link/su2_l/sm2_l/w2_l>,
+        </outdoor_description/Geometry/base_link/su3_l>,
+        </outdoor_description/Geometry/base_link/su3_l/sm3_l>,
+        </outdoor_description/Geometry/base_link/su3_l/sm3_l/w3_l>,
+        </outdoor_description/Geometry/base_link/su4_l>,
+        </outdoor_description/Geometry/base_link/su4_l/sm4_l>,
+        </outdoor_description/Geometry/base_link/su4_l/sm4_l/w4_l>,
+    ]
+    token isaac:robotType = "Wheeled"
+
+    over "Geometry"
+    {
+        over "base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "tu1_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "W1_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "W1_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "tu1_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "tu2_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "W2_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "W2_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "tu2_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "tu3_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "W3_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "W3_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "tu3_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "tu4_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "W4_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "W4_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "tu4_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "su1_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "sm1_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "w1_l" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "w1_j" (
+                            prepend apiSchemas = ["IsaacJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "sm1_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "su1_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "su2_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "sm2_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "w2_l" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "w2_j" (
+                            prepend apiSchemas = ["IsaacJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "sm2_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "su2_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "su3_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "sm3_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "w3_l" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "w3_j" (
+                            prepend apiSchemas = ["IsaacJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "sm3_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "su3_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "su4_l" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "sm4_l" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "w4_l" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "w4_j" (
+                            prepend apiSchemas = ["IsaacJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "sm4_j" (
+                        prepend apiSchemas = ["IsaacJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "su4_j" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+        }
+    }
+}
+

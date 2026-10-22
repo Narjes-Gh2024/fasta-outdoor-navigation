@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Odometry1/Shape1
         - /Odometry2/Shape1
-        - /Odometry3
         - /Odometry3/Shape1
       Splitter Ratio: 0.5
     Tree Height: 549
@@ -55,31 +54,61 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        FL_shock_link:
+        W1_l:
           Value: true
-        FL_trail_link:
+        W2_l:
           Value: true
-        FL_wheel_link:
+        W3_l:
           Value: true
-        FR_shock_link:
+        W4_l:
           Value: true
-        FR_trail_link:
-          Value: true
-        FR_wheel_link:
-          Value: true
-        RL_shock_link:
-          Value: true
-        RL_trail_link:
-          Value: true
-        RL_wheel_link:
-          Value: true
-        RR_shock_link:
-          Value: true
-        RR_trail_link:
-          Value: true
-        RR_wheel_link:
+        back_camera:
           Value: true
         base_link:
+          Value: true
+        front_camera:
+          Value: true
+        left_camera:
+          Value: true
+        odom:
+          Value: true
+        right_camera:
+          Value: true
+        sim_imu:
+          Value: true
+        sim_lidar:
+          Value: true
+        sm1_l:
+          Value: true
+        sm2_l:
+          Value: true
+        sm3_l:
+          Value: true
+        sm4_l:
+          Value: true
+        su1_l:
+          Value: true
+        su2_l:
+          Value: true
+        su3_l:
+          Value: true
+        su4_l:
+          Value: true
+        tu1_l:
+          Value: true
+        tu2_l:
+          Value: true
+        tu3_l:
+          Value: true
+        tu4_l:
+          Value: true
+        w1_l:
+          Value: true
+        w2_l:
+          Value: true
+        w3_l:
+          Value: true
+        w4_l:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -87,27 +116,48 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          FL_shock_link:
-            {}
-          FL_trail_link:
-            FL_wheel_link:
+        odom:
+          base_link:
+            back_camera:
               {}
-          FR_shock_link:
-            {}
-          FR_trail_link:
-            FR_wheel_link:
+            front_camera:
               {}
-          RL_shock_link:
-            {}
-          RL_trail_link:
-            RL_wheel_link:
+            left_camera:
               {}
-          RR_shock_link:
-            {}
-          RR_trail_link:
-            RR_wheel_link:
+            right_camera:
               {}
+            sim_imu:
+              {}
+            sim_lidar:
+              {}
+            su1_l:
+              sm1_l:
+                w1_l:
+                  {}
+            su2_l:
+              sm2_l:
+                w2_l:
+                  {}
+            su3_l:
+              sm3_l:
+                w3_l:
+                  {}
+            su4_l:
+              sm4_l:
+                w4_l:
+                  {}
+            tu1_l:
+              W1_l:
+                {}
+            tu2_l:
+              W2_l:
+                {}
+            tu3_l:
+              W3_l:
+                {}
+            tu4_l:
+              W4_l:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -127,68 +177,108 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
-        FL_shock_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FL_trail_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FL_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_shock_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_trail_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        FR_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         Link Tree Style: Links in Alphabetic Order
-        RL_shock_link:
+        W1_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RL_trail_link:
+        W2_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RL_wheel_link:
+        W3_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RR_shock_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RR_trail_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RR_wheel_link:
+        W4_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sm1_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sm2_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sm3_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sm4_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        su1_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        su2_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        su3_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        su4_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tu1_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tu2_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tu3_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tu4_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        w1_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        w2_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        w3_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        w4_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -252,7 +342,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 1
       Name: Odometry
       Position Tolerance: 0.10000000149011612
@@ -273,7 +363,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /odom_gt
-      Value: true
+      Value: false
     - Angle Tolerance: 0.10000000149011612
       Class: rviz_default_plugins/Odometry
       Covariance:
@@ -291,7 +381,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 1
       Name: Odometry
       Position Tolerance: 0.10000000149011612
@@ -312,7 +402,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /odom
-      Value: true
+      Value: false
     - Angle Tolerance: 0.10000000149011612
       Class: rviz_default_plugins/Odometry
       Covariance:
@@ -330,7 +420,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 1
       Name: Odometry
       Position Tolerance: 0.10000000149011612
@@ -351,11 +441,50 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /output_odom
+      Value: false
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz_default_plugins/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Keep: 100
+      Name: Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /encoder_odom
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
